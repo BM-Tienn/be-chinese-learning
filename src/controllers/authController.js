@@ -1,0 +1,201 @@
+const User = require('../models/User'); // Import model User
+const catchAsync = require('../utils/catchAsync'); // Tiện ích bắt lỗi bất đồng bộ
+const AppError = require('../utils/appError'); // Lớp lỗi tùy chỉnh
+const jwt = require('jsonwebtoken'); // Thư viện để tạo và xác minh JWT
+const { promisify } = require('util'); // Chuyển đổi hàm callback thành Promise
+const ApiResponse = require('../utils/apiResponse'); // Import ApiResponse utility
+const dotenv = require('dotenv');
+
+// Hàm tạo JWT token
+const signToken = id => {
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here', {
+    expiresIn: process.env.JWT_EXPIRES_IN || '90d'
+  });
+};
+
+// Hàm tạo và gửi token cùng với phản hồi người dùng
+const createSendToken = (user, statusCode, res) => {
+  const token = signToken(user._id); // Tạo token
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000 // Sử dụng JWT_COOKIE_EXPIRES_IN (đơn vị ngày)
+    ),
+    httpOnly: true, // Cookie chỉ có thể truy cập bằng HTTP(S) request, không phải client-side JavaScript
+    secure: process.env.NODE_ENV === 'production' // Chỉ gửi qua HTTPS trong môi trường production
+  };
+
+  res.cookie('jwt', token, cookieOptions); // Đặt cookie JWT
+
+  // Loại bỏ mật khẩu khỏi đầu ra
+  user.password = undefined;
+
+  const responseData = {
+    token,
+    user
+  };
+
+  return ApiResponse.successSingle(res, statusCode, responseData, 'Xác thực thành công');
+};
+
+class AuthController {
+  /**
+   * @desc Register a new user
+   * @route POST /api/v1/auth/signup
+   * @access Public
+   */
+  signup = catchAsync(async (req, res, next) => {
+    console.log('Signup controller called with:', { 
+      username: req.body.username, 
+      email: req.body.email,
+      hasPassword: !!req.body.password,
+      hasPasswordConfirm: !!req.body.passwordConfirm
+    });
+
+    // Kiểm tra lại email đã tồn tại chưa (double-check)
+    const existingUser = await User.findOne({ email: req.body.email });
+    if (existingUser) {
+      return next(new AppError('Email đã được sử dụng', 400));
+    }
+
+    const newUser = await User.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
+      passwordConfirm: req.body.passwordConfirm,
+      // role: req.body.role // Không cho phép người dùng tự đặt vai trò khi đăng ký
+    });
+
+    console.log('User created successfully:', newUser._id);
+    createSendToken(newUser, 201, res); // Tạo và gửi token
+  });
+
+  /**
+   * @desc Log in a user
+   * @route POST /api/v1/auth/login
+   * @access Public
+   */
+  login = catchAsync(async (req, res, next) => {
+    const { email, password } = req.body;
+
+    // 1) Kiểm tra xem email và mật khẩu có tồn tại không
+    if (!email || !password) {
+      return next(new AppError('Please provide email and password!', 400));
+    }
+
+    // 2) Kiểm tra xem người dùng có tồn tại && mật khẩu có đúng không
+    const user = await User.findOne({ email }).select('+password'); // Chọn trường password để so sánh
+
+    if (!user || !(await user.correctPassword(password, user.password))) {
+      return next(new AppError('Incorrect email or password', 401));
+    }
+
+    // 3) Nếu mọi thứ đều ổn, gửi token cho client
+    createSendToken(user, 200, res);
+  });
+
+  /**
+   * @desc Log out a user
+   * @route GET /api/v1/auth/logout
+   * @access Public (but typically used by authenticated users)
+   */
+  logout = (req, res) => {
+    res.cookie('jwt', 'loggedout', {
+      expires: new Date(Date.now() + 10 * 1000), // Cookie hết hạn sau 10 giây
+      httpOnly: true
+    });
+    return ApiResponse.success(res, 200, [], null, 'Đăng xuất thành công');
+  };
+
+  /**
+   * @desc Protect routes (middleware function)
+   * @param {Object} req - Express request object
+   * @param {Object} res - Express response object
+   * @param {Function} next - Express next middleware function
+   * @access Private
+   */
+  protect = catchAsync(async (req, res, next) => {
+    // 1) Get token and check if it's there
+    let token;
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+      token = req.headers.authorization.split(' ')[1]; // Lấy token từ header Authorization
+    } else if (req.cookies.jwt) {
+      token = req.cookies.jwt; // Lấy token từ cookie
+    }
+
+    if (!token) {
+      return next(new AppError('You are not logged in! Please log in to get access.', 401)); // Trả lỗi 401 nếu không có token
+    }
+
+    // 2) Verify token
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here'); // Giải mã token
+
+    // 3) Check if user still exists
+    const currentUser = await User.findById(decoded.id); // Tìm người dùng theo ID từ token
+    if (!currentUser) {
+      return next(new AppError('The user belonging to this token no longer exists.', 401)); // Trả lỗi nếu người dùng không tồn tại
+    }
+
+    // 4) Check if user changed password after the token was issued
+    if (currentUser.changedPasswordAfter(decoded.iat)) {
+      return next(new AppError('User recently changed password! Please log in again.', 401)); // Trả lỗi nếu mật khẩu đã thay đổi
+    }
+
+    // GRANT ACCESS TO PROTECTED ROUTE
+    req.user = currentUser; // Gán người dùng vào req.user
+    res.locals.user = currentUser; // Gán người dùng vào res.locals (cho các template engine nếu có)
+    next(); // Chuyển sang middleware/controller tiếp theo
+  });
+
+  /**
+   * @desc Restrict access to specific roles (middleware function)
+   * @param {...string} roles - Allowed roles (e.g., 'admin', 'user')
+   * @returns {Function} Express middleware function
+   * @access Private
+   */
+  restrictTo = (...roles) => {
+    return (req, res, next) => {
+      // 'roles' is an array like ['admin', 'lead-guide']
+      if (!roles.includes(req.user.role)) {
+        return next(new AppError('You do not have permission to perform this action', 403)); // Trả lỗi 403 Forbidden nếu không có quyền
+      }
+      next(); // Chuyển sang middleware/controller tiếp theo
+    };
+  };
+
+  /**
+   * @desc Check if user is logged in (middleware function, optional protection)
+   * @param {Object} req - Express request object
+   * @param {Object} res - Express response object
+   * @param {Function} next - Express next middleware function
+   * @access Public (does not block access, just sets req.user if logged in)
+   */
+  isLoggedIn = async (req, res, next) => {
+    if (req.cookies.jwt) {
+      try {
+        // 1) Verify token
+        const decoded = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here');
+
+        // 2) Check if user still exists
+        const currentUser = await User.findById(decoded.id);
+        if (!currentUser) {
+          return next();
+        }
+
+        // 3) Check if user changed password after the token was issued
+        if (currentUser.changedPasswordAfter(decoded.iat)) {
+          return next();
+        }
+
+        // THERE IS A LOGGED IN USER
+        req.user = currentUser;
+        res.locals.user = currentUser;
+        return next();
+      } catch (err) {
+        return next();
+      }
+    }
+    next();
+  };
+}
+
+module.exports = new AuthController(); // Export một thể hiện của AuthController
