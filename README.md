@@ -1,41 +1,41 @@
 # Chinese Learning V2 - Backend API
 
-Ứng dụng học tiếng Trung với API backend được xây dựng theo chuẩn Node.js project structure.
+A Chinese learning application with a Node.js backend API built following standard project structure.
 
-## 🏗️ Cấu trúc Project
+## 🏗️ Project Structure
 
 ```
 chinese-learning-v2/
-├── src/                          # Source code chính
-│   ├── config/                   # Cấu hình hệ thống
-│   │   ├── database.js          # Kết nối MongoDB
-│   │   └── swagger.js           # Cấu hình Swagger API docs
-│   ├── models/                   # Schema MongoDB/Mongoose
-│   │   ├── User.js              # Model người dùng
-│   │   ├── Vocabulary.js        # Model từ vựng chung
-│   │   └── Word.js              # Model từ vựng cá nhân
-│   ├── controllers/              # Xử lý request/response
-│   │   ├── authController.js    # Xác thực (login, signup)
-│   │   ├── userController.js    # Quản lý người dùng
-│   │   ├── vocabularyController.js # Quản lý từ vựng chung
-│   │   └── wordController.js    # Quản lý từ vựng cá nhân
-│   ├── services/                 # Logic nghiệp vụ
-│   │   ├── userService.js       # Service người dùng
-│   │   ├── vocabularyService.js # Service từ vựng
-│   │   ├── wordService.js       # Service từ vựng cá nhân
-│   │   ├── cedictService.js     # Service import CC-CEDICT
-│   │   └── socketService.js     # Service Socket.IO
-│   ├── middlewares/              # Middleware Express
-│   │   ├── auth.js              # Xác thực JWT
-│   │   ├── errorHandler.js      # Xử lý lỗi
-│   │   ├── requestLogger.js     # Log request
-│   │   ├── security.js          # Bảo mật
-│   │   └── upload.js            # Upload file
-│   ├── validate/                 # Validation schema
-│   │   ├── authValidation.js    # Validate auth
-│   │   ├── userValidation.js    # Validate user
-│   │   ├── vocabularyValidation.js # Validate vocabulary
-│   │   └── wordValidation.js    # Validate word
+├── src/                          # Main source code
+│   ├── config/                   # System configuration
+│   │   ├── database.js          # MongoDB connection
+│   │   └── swagger.js           # Swagger API docs configuration
+│   ├── models/                   # MongoDB/Mongoose schemas
+│   │   ├── User.js              # User model
+│   │   ├── Vocabulary.js        # General vocabulary model
+│   │   └── Word.js              # Personal vocabulary model
+│   ├── controllers/              # Request/response handlers
+│   │   ├── authController.js    # Authentication (login, signup)
+│   │   ├── userController.js    # User management
+│   │   ├── vocabularyController.js # General vocabulary management
+│   │   └── wordController.js    # Personal vocabulary management
+│   ├── services/                 # Business logic
+│   │   ├── userService.js       # User service
+│   │   ├── vocabularyService.js # Vocabulary service
+│   │   ├── wordService.js       # Personal vocabulary service
+│   │   ├── cedictService.js     # CC-CEDICT import service
+│   │   └── socketService.js     # Socket.IO service
+│   ├── middlewares/              # Express middlewares
+│   │   ├── auth.js              # JWT authentication
+│   │   ├── errorHandler.js      # Error handling
+│   │   ├── requestLogger.js     # Request logging
+│   │   ├── security.js          # Security
+│   │   └── upload.js            # File upload
+│   ├── validate/                 # Validation schemas
+│   │   ├── authValidation.js    # Auth validation
+│   │   ├── userValidation.js    # User validation
+│   │   ├── vocabularyValidation.js # Vocabulary validation
+│   │   └── wordValidation.js    # Word validation
 │   ├── webhooks/                 # Webhook handlers
 │   │   └── handlers.js          # Socket.IO handlers
 │   ├── routes/                   # API routes
@@ -44,6 +44,7 @@ chinese-learning-v2/
 │   │   ├── vocabularyRoutes.js  # Vocabulary routes
 │   │   └── wordRoutes.js        # Word routes
 │   ├── utils/                    # Utility functions
+│   │   ├── constants.js         # 🆕 Centralized configuration constants
 │   │   ├── apiResponse.js       # Response format
 │   │   ├── appError.js          # Error handling
 │   │   ├── catchAsync.js        # Async error wrapper
@@ -53,8 +54,8 @@ chinese-learning-v2/
 │   │   └── docs/                # Documentation files
 │   ├── logs/                     # Log files
 │   ├── scripts/                  # CLI scripts
-│   │   ├── seedData.js          # Seed database
-│   │   ├── view-logs.js         # View logs
+│   │   ├── seedData.js          # Database seeding
+│   │   ├── view-logs.js         # Log viewer
 │   │   └── data/                # Sample data
 │   ├── tests/                    # Test files
 │   ├── app.js                    # Express app setup
@@ -65,25 +66,25 @@ chinese-learning-v2/
 └── README.md                     # Project documentation
 ```
 
-## 🚀 Cài đặt & Chạy
+## 🚀 Installation & Setup
 
-### 1. Cài đặt dependencies
+### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### 2. Cấu hình environment
+### 2. Configure environment
 ```bash
 cp .env.example .env
-# Chỉnh sửa .env với thông tin database và JWT secret
+# Edit .env with database info and JWT secret
 ```
 
-### 3. Chạy development server
+### 3. Run development server
 ```bash
 npm run dev
 ```
 
-### 4. Seed database (tùy chọn)
+### 4. Seed database (optional)
 ```bash
 npm run seed
 ```
@@ -93,43 +94,43 @@ npm run seed
 - **Swagger UI**: http://localhost:5678/api-docs
 - **Health Check**: http://localhost:5678/health
 
-## 🔧 Scripts
+## 🔧 Available Scripts
 
 ```bash
 # Development
-npm run dev              # Chạy với nodemon
-npm start               # Chạy production
-npm run prod            # Chạy production mode
+npm run dev              # Run with nodemon
+npm start               # Run production
+npm run prod            # Run production mode
 
 # Database
-npm run seed            # Seed dữ liệu mẫu
-npm run delete-data     # Xóa tất cả dữ liệu
+npm run seed            # Seed sample data
+npm run delete-data     # Delete all data
 
 # Logs
-npm run logs:all        # Xem tất cả logs
-npm run logs:cleanup    # Dọn logs cũ
-npm run logs:stats      # Thống kê logs
+npm run logs:all        # View all logs
+npm run logs:cleanup    # Clean old logs
+npm run logs:stats      # Log statistics
 
 # Testing
-npm test                # Chạy tests
-npm run test:watch      # Chạy tests với watch mode
+npm test                # Run tests
+npm run test:watch      # Run tests with watch mode
 ```
 
-## 🏛️ Kiến trúc
+## 🏛️ Architecture
 
 ### 1. **Controllers** (Thin Layer)
-- Nhận request từ client
+- Receive requests from client
 - Validate input
-- Gọi service layer
-- Trả response
+- Call service layer
+- Return response
 
 ### 2. **Services** (Business Logic)
-- Xử lý logic nghiệp vụ
-- Tương tác với database
-- Không phụ thuộc Express
+- Handle business logic
+- Interact with database
+- Independent of Express
 
 ### 3. **Models** (Data Layer)
-- Định nghĩa schema MongoDB
+- Define MongoDB schemas
 - Validation rules
 - Database operations
 
@@ -150,6 +151,7 @@ npm run test:watch      # Chạy tests với watch mode
 - Parameter pollution protection
 - Security headers (Helmet)
 - Input validation & sanitization
+- Centralized configuration management
 
 ## 📊 Logging System
 
@@ -163,7 +165,7 @@ npm run test:watch      # Chạy tests với watch mode
 ## 🧪 Testing
 
 ```bash
-# Chạy tất cả tests
+# Run all tests
 npm test
 
 # Test content-type validation
@@ -195,14 +197,34 @@ JWT_COOKIE_EXPIRES_IN=90
 ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001
 ```
 
+## ⚙️ Configuration Management
+
+Tất cả cấu hình được tập trung trong file `src/utils/constants.js`:
+
+- **FILE_UPLOAD**: File size limits, allowed types, upload directories
+- **RATE_LIMITS**: Rate limiting configuration for different endpoints
+- **REQUEST**: Request size limits, pagination defaults, API version
+- **SECURITY**: JWT settings, password requirements, CORS configuration
+- **DATABASE**: Connection settings, query limits, index options
+- **LOGGING**: Log levels, file paths, performance thresholds
+- **VALIDATION**: Field length limits, business rules
+- **BUSINESS**: Study session settings, progress tracking, HSK levels
+- **CACHE**: TTL settings, key prefixes
+- **ERROR_MESSAGES**: Centralized error messages
+- **SUCCESS_MESSAGES**: Centralized success messages
+- **HTTP_STATUS**: HTTP status codes
+- **ENVIRONMENT**: Environment detection and settings
+
+Xem chi tiết: [Constants Configuration Guide](src/utils/README_CONSTANTS.md)
+
 ## 🤝 Contributing
 
-1. Fork project
-2. Tạo feature branch
-3. Commit changes
-4. Push to branch
-5. Tạo Pull Request
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## 📄 License
 
-MIT License - xem file [LICENSE](LICENSE) để biết thêm chi tiết. 
+MIT License - see [LICENSE](LICENSE) file for details. 

@@ -4,12 +4,12 @@ const AppError = require('../utils/appError'); // Lớp lỗi tùy chỉnh
 const jwt = require('jsonwebtoken'); // Thư viện để tạo và xác minh JWT
 const { promisify } = require('util'); // Chuyển đổi hàm callback thành Promise
 const ApiResponse = require('../utils/apiResponse'); // Import ApiResponse utility
-const dotenv = require('dotenv');
+const { SECURITY, ERROR_MESSAGES, SUCCESS_MESSAGES } = require('../utils/constants');
 
 // Hàm tạo JWT token
 const signToken = id => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here', {
-    expiresIn: process.env.JWT_EXPIRES_IN || '90d'
+  return jwt.sign({ id }, SECURITY.JWT.SECRET, {
+    expiresIn: SECURITY.JWT.EXPIRES_IN
   });
 };
 
@@ -18,7 +18,7 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id); // Tạo token
   const cookieOptions = {
     expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000 // Sử dụng JWT_COOKIE_EXPIRES_IN (đơn vị ngày)
+      Date.now() + SECURITY.JWT.COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000 // Sử dụng JWT_COOKIE_EXPIRES_IN (đơn vị ngày)
     ),
     httpOnly: true, // Cookie chỉ có thể truy cập bằng HTTP(S) request, không phải client-side JavaScript
     secure: process.env.NODE_ENV === 'production' // Chỉ gửi qua HTTPS trong môi trường production
@@ -44,13 +44,6 @@ class AuthController {
    * @access Public
    */
   signup = catchAsync(async (req, res, next) => {
-    console.log('Signup controller called with:', { 
-      username: req.body.username, 
-      email: req.body.email,
-      hasPassword: !!req.body.password,
-      hasPasswordConfirm: !!req.body.passwordConfirm
-    });
-
     // Kiểm tra lại email đã tồn tại chưa (double-check)
     const existingUser = await User.findOne({ email: req.body.email });
     if (existingUser) {
@@ -65,7 +58,6 @@ class AuthController {
       // role: req.body.role // Không cho phép người dùng tự đặt vai trò khi đăng ký
     });
 
-    console.log('User created successfully:', newUser._id);
     createSendToken(newUser, 201, res); // Tạo và gửi token
   });
 
@@ -79,14 +71,14 @@ class AuthController {
 
     // 1) Kiểm tra xem email và mật khẩu có tồn tại không
     if (!email || !password) {
-      return next(new AppError('Please provide email and password!', 400));
+      return next(new AppError(ERROR_MESSAGES.AUTH.INVALID_CREDENTIALS, 400));
     }
 
     // 2) Kiểm tra xem người dùng có tồn tại && mật khẩu có đúng không
     const user = await User.findOne({ email }).select('+password'); // Chọn trường password để so sánh
 
     if (!user || !(await user.correctPassword(password, user.password))) {
-      return next(new AppError('Incorrect email or password', 401));
+      return next(new AppError(ERROR_MESSAGES.AUTH.INVALID_CREDENTIALS, 401));
     }
 
     // 3) Nếu mọi thứ đều ổn, gửi token cho client
@@ -103,7 +95,7 @@ class AuthController {
       expires: new Date(Date.now() + 10 * 1000), // Cookie hết hạn sau 10 giây
       httpOnly: true
     });
-    return ApiResponse.success(res, 200, [], null, 'Đăng xuất thành công');
+    return ApiResponse.success(res, 200, [], null, SUCCESS_MESSAGES.AUTH.LOGOUT_SUCCESS);
   };
 
   /**
@@ -123,21 +115,21 @@ class AuthController {
     }
 
     if (!token) {
-      return next(new AppError('You are not logged in! Please log in to get access.', 401)); // Trả lỗi 401 nếu không có token
+      return next(new AppError(ERROR_MESSAGES.AUTH.UNAUTHORIZED, 401)); // Trả lỗi 401 nếu không có token
     }
 
     // 2) Verify token
-    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here'); // Giải mã token
+    const decoded = await promisify(jwt.verify)(token, SECURITY.JWT.SECRET); // Giải mã token
 
     // 3) Check if user still exists
     const currentUser = await User.findById(decoded.id); // Tìm người dùng theo ID từ token
     if (!currentUser) {
-      return next(new AppError('The user belonging to this token no longer exists.', 401)); // Trả lỗi nếu người dùng không tồn tại
+      return next(new AppError(ERROR_MESSAGES.AUTH.TOKEN_INVALID, 401)); // Trả lỗi nếu người dùng không tồn tại
     }
 
     // 4) Check if user changed password after the token was issued
     if (currentUser.changedPasswordAfter(decoded.iat)) {
-      return next(new AppError('User recently changed password! Please log in again.', 401)); // Trả lỗi nếu mật khẩu đã thay đổi
+      return next(new AppError(ERROR_MESSAGES.AUTH.TOKEN_EXPIRED, 401)); // Trả lỗi nếu mật khẩu đã thay đổi
     }
 
     // GRANT ACCESS TO PROTECTED ROUTE
@@ -156,7 +148,7 @@ class AuthController {
     return (req, res, next) => {
       // 'roles' is an array like ['admin', 'lead-guide']
       if (!roles.includes(req.user.role)) {
-        return next(new AppError('You do not have permission to perform this action', 403)); // Trả lỗi 403 Forbidden nếu không có quyền
+        return next(new AppError(ERROR_MESSAGES.AUTH.FORBIDDEN, 403)); // Trả lỗi 403 Forbidden nếu không có quyền
       }
       next(); // Chuyển sang middleware/controller tiếp theo
     };
@@ -173,7 +165,7 @@ class AuthController {
     if (req.cookies.jwt) {
       try {
         // 1) Verify token
-        const decoded = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here');
+        const decoded = await promisify(jwt.verify)(req.cookies.jwt, SECURITY.JWT.SECRET);
 
         // 2) Check if user still exists
         const currentUser = await User.findById(decoded.id);

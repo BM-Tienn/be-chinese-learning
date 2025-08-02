@@ -8,11 +8,8 @@ module.exports = (io) => {
 
   // Lắng nghe sự kiện 'connection' khi một client kết nối
   io.on('connection', (socket) => {
-    console.log(`A user connected: ${socket.id}`); // Ghi log khi có người dùng kết nối
-
     // Ví dụ: Xử lý sự kiện tin nhắn trò chuyện
     socket.on('chatMessage', (msg) => {
-      console.log(`Message from ${socket.id}: ${msg}`);
       // Phát sóng tin nhắn tới tất cả các client đã kết nối
       socketService.broadcast('chatMessage', { sender: socket.id, message: msg });
     });
@@ -21,7 +18,6 @@ module.exports = (io) => {
     // Trong một ứng dụng thực tế, điều này sẽ liên quan đến logic phức tạp hơn,
     // có thể gửi dữ liệu âm thanh và nhận lại kết quả phân tích.
     socket.on('analyzePronunciation', (audioData) => {
-      console.log(`Received pronunciation analysis request from ${socket.id}`);
       // Mô phỏng phân tích và gửi lại kết quả
       const result = {
         score: Math.floor(Math.random() * 100), // Điểm ngẫu nhiên
@@ -40,7 +36,7 @@ module.exports = (io) => {
 
     // Xử lý ngắt kết nối
     socket.on('disconnect', () => {
-      console.log(`User disconnected: ${socket.id}`); // Ghi log khi người dùng ngắt kết nối
+      // User disconnected
     });
 
     // Xử lý lỗi trên socket

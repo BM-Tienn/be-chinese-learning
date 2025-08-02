@@ -12,7 +12,7 @@ class SocketService {
   initialize(server) {
     this.io = socketIO(server, {
       cors: {
-        origin: process.env.CLIENT_URL || "http://localhost:3000",
+        origin: process.env.CLIENT_URL || "http://localhost:5173",
         methods: ["GET", "POST"]
       }
     });
@@ -26,7 +26,7 @@ class SocketService {
           return next(new Error('Token không được cung cấp'));
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-super-secret-jwt-key-here');
         const user = await User.findById(decoded.id).select('-password');
         
         if (!user) {
@@ -51,8 +51,6 @@ class SocketService {
     }
 
     this.io.on('connection', (socket) => {
-      console.log(`Người dùng ${socket.user?.username || socket.id} đã kết nối`);
-
       // Store connected user if authenticated
       if (socket.user) {
         this.connectedUsers.set(socket.user.id, {
@@ -109,7 +107,6 @@ class SocketService {
 
       // Handle disconnect
       socket.on('disconnect', () => {
-        console.log(`Người dùng ${socket.user?.username || socket.id} đã ngắt kết nối`);
         if (socket.user) {
           this.connectedUsers.delete(socket.user.id);
         }

@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const { DATABASE } = require('../utils/constants');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chinese-learning-v2');
+    const conn = await mongoose.connect(DATABASE.CONNECTION_STRING, {
+      serverSelectionTimeoutMS: DATABASE.CONNECTION_TIMEOUT
+    });
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {

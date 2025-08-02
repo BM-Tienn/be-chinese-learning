@@ -5,6 +5,13 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const AppError = require('../utils/appError');
+const { 
+  FILE_UPLOAD, 
+  RATE_LIMITS, 
+  REQUEST, 
+  SECURITY, 
+  ERROR_MESSAGES 
+} = require('../utils/constants');
 
 // Tạo store cho upload rate limit để có thể reset
 const uploadRateLimitStore = new Map();
@@ -27,25 +34,25 @@ const createRateLimit = (windowMs, max, message) => {
 
 // Rate limit cho authentication
 const authRateLimit = createRateLimit(
-  15 * 60 * 1000, // 15 phút
-  5, // 5 requests
-  'Quá nhiều lần đăng nhập thất bại, vui lòng thử lại sau 15 phút'
+  RATE_LIMITS.AUTH.WINDOW_MS,
+  RATE_LIMITS.AUTH.MAX_REQUESTS,
+  RATE_LIMITS.AUTH.MESSAGE
 );
 
 // Rate limit cho API chung
 const apiRateLimit = createRateLimit(
-  15 * 60 * 1000, // 15 phút
-  100, // 100 requests
-  'Quá nhiều request, vui lòng thử lại sau 15 phút'
+  RATE_LIMITS.GENERAL.WINDOW_MS,
+  RATE_LIMITS.GENERAL.MAX_REQUESTS,
+  RATE_LIMITS.GENERAL.MESSAGE
 );
 
 // Rate limit cho upload với custom store
 const uploadRateLimit = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 giờ
-  max: 50, // 50 uploads (tăng từ 10 lên 50)
+  windowMs: RATE_LIMITS.UPLOAD.WINDOW_MS,
+  max: RATE_LIMITS.UPLOAD.MAX_REQUESTS,
   message: {
     status: 'error',
-    message: 'Quá nhiều upload, vui lòng thử lại sau 1 giờ'
+    message: RATE_LIMITS.UPLOAD.MESSAGE
   },
   standardHeaders: true,
   legacyHeaders: false,
@@ -53,7 +60,7 @@ const uploadRateLimit = rateLimit({
     incr: (key) => {
       const current = uploadRateLimitStore.get(key) || 0;
       uploadRateLimitStore.set(key, current + 1);
-      return Promise.resolve({ totalHits: current + 1, resetTime: Date.now() + 60 * 60 * 1000 });
+      return Promise.resolve({ totalHits: current + 1, resetTime: Date.now() + RATE_LIMITS.UPLOAD.WINDOW_MS });
     },
     decrement: (key) => {
       const current = uploadRateLimitStore.get(key) || 0;
@@ -80,32 +87,22 @@ const corsOptions = {
   origin: function (origin, callback) {
     // Cho phép requests không có origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
-    console.log(origin);
-    const allowedOrigins = [
-      process.env.CLIENT_URL,
-      'http://localhost:5678',
-      'http://localhost:5173',
-      'http://127.0.0.1:5678',
-      'http://127.0.0.1:5173',
-      'http://localhost:3000',
-      'http://127.0.0.1:3000'
-    ];
-    console.log(process.env.NODE_ENV);
+    
     // Trong development, cho phép tất cả origins
     if (process.env.NODE_ENV === 'development') {
       return callback(null, true);
     }
     
-    if (allowedOrigins.indexOf(origin) !== -1) {
+    if (SECURITY.CORS.ALLOWED_ORIGINS.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new AppError('Không được phép truy cập từ origin này', 403));
     }
   },
-  credentials: true,
+  credentials: SECURITY.CORS.CREDENTIALS,
   optionsSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin']
+  methods: SECURITY.CORS.ALLOWED_METHODS,
+  allowedHeaders: SECURITY.CORS.ALLOWED_HEADERS
 };
 
 /**
@@ -206,13 +203,13 @@ const validateRequestSize = (req, res, next) => {
   const contentLength = parseInt(req.headers['content-length'] || '0');
   const isFileUploadEndpoint = req.path.includes('/upload-cedict');
   
-  // Cho phép file upload lớn hơn (50MB)
-  const maxSize = isFileUploadEndpoint ? 50 * 1024 * 1024 : 10 * 1024 * 1024; // 50MB cho upload, 10MB cho khác
+  // Cho phép file upload lớn hơn
+  const maxSize = isFileUploadEndpoint ? FILE_UPLOAD.MAX_JSON_FILE_SIZE : FILE_UPLOAD.MAX_FILE_SIZE;
   
-  if (contentLength > maxSize) {
-    const maxSizeMB = isFileUploadEndpoint ? 50 : 10;
-    return next(new AppError(`Request body quá lớn (tối đa ${maxSizeMB}MB)`, 413));
-  }
+  // if (contentLength > maxSize) {
+  //   const maxSizeMB = Math.floor(maxSize / (1024 * 1024));
+  //   return next(new AppError(`Request body quá lớn (tối đa ${maxSizeMB}MB)`, 413));
+  // }
   next();
 };
 
@@ -230,28 +227,7 @@ const blockSuspiciousUserAgents = (req, res, next) => {
     return next();
   }
   
-  const suspiciousPatterns = [
-    /bot/i,
-    /crawler/i,
-    /spider/i,
-    /scraper/i,
-    /curl/i,
-    /wget/i,
-    /python/i,
-    /java/i,
-    /perl/i,
-    /ruby/i,
-    /php/i,
-    /sqlmap/i,
-    /nikto/i,
-    /nmap/i,
-    /metasploit/i,
-    /burp/i,
-    /zap/i,
-    /acunetix/i,
-    /nessus/i,
-    /openvas/i
-  ];
+  const suspiciousPatterns = SECURITY.SUSPICIOUS_USER_AGENTS.map(agent => new RegExp(agent, 'i'));
 
   const isSuspicious = suspiciousPatterns.some(pattern => pattern.test(userAgent));
   
@@ -275,7 +251,7 @@ const validateApiVersion = (req, res, next) => {
   const pathParts = req.path.split('/');
   const apiVersion = pathParts[2]; // /api/v1/...
   
-  if (apiVersion !== 'v1') {
+  if (apiVersion !== REQUEST.API_VERSION) {
     return next(new AppError('API version không được hỗ trợ', 400));
   }
   
@@ -297,7 +273,7 @@ const logSecurityEvent = (req, res, next) => {
 
   // Log các events quan trọng
   if (req.path.includes('/auth') && req.method === 'POST') {
-    console.log(`Authentication attempt from ${req.ip} - ${req.path}`);
+    // Authentication attempt logged
   }
 
   next();

@@ -258,7 +258,6 @@ class Logger {
         
         if (stats.mtime.getTime() < thirtyDaysAgo) {
           await fs.unlink(filePath);
-          console.log(`Đã xóa file log cũ: ${file}`);
         }
       }
     } catch (error) {

@@ -1,11 +1,12 @@
 const multer = require('multer'); // Thư viện xử lý tải lên tệp
 const AppError = require('../utils/appError'); // Lớp lỗi tùy chỉnh
+const { FILE_UPLOAD, ERROR_MESSAGES } = require('../utils/constants');
 
 // Cấu hình lưu trữ cho các tệp đã tải lên
 const multerStorage = multer.diskStorage({
   destination: (req, file, cb) => {
     // Định nghĩa thư mục đích cho các tệp tải lên
-    cb(null, 'uploads/'); // Tệp sẽ được lưu vào thư mục 'uploads/'
+    cb(null, FILE_UPLOAD.UPLOAD_DIR); // Tệp sẽ được lưu vào thư mục 'uploads/'
   },
   filename: (req, file, cb) => {
     // Định nghĩa tên tệp cho các tệp đã tải lên
@@ -20,12 +21,18 @@ const multerMemoryStorage = multer.memoryStorage();
 
 // Bộ lọc cho các loại tệp được phép
 const multerFilter = (req, file, cb) => {
-  if (file.mimetype.startsWith('image') || 
-      file.mimetype.startsWith('audio') || 
-      file.mimetype === 'application/json') {
-    cb(null, true); // Chấp nhận tệp nếu là ảnh, âm thanh hoặc JSON
+  const allowedTypes = [
+    ...FILE_UPLOAD.ALLOWED_IMAGE_TYPES,
+    ...FILE_UPLOAD.ALLOWED_JSON_TYPES,
+    'audio/wav',
+    'audio/mp3',
+    'audio/mpeg'
+  ];
+  
+  if (allowedTypes.includes(file.mimetype)) {
+    cb(null, true); // Chấp nhận tệp nếu là loại được phép
   } else {
-    cb(new AppError('Chỉ chấp nhận file ảnh, âm thanh hoặc JSON!', 400), false); // Từ chối tệp và trả lỗi
+    cb(new AppError(ERROR_MESSAGES.UPLOAD.INVALID_FILE_TYPE, 400), false); // Từ chối tệp và trả lỗi
   }
 };
 
@@ -34,7 +41,7 @@ const upload = multer({
   storage: multerStorage,
   fileFilter: multerFilter,
   limits: {
-    fileSize: 10 * 1024 * 1024 // Giới hạn kích thước tệp là 10 MB
+    fileSize: FILE_UPLOAD.MAX_FILE_SIZE // Giới hạn kích thước tệp
   }
 });
 
@@ -42,14 +49,14 @@ const upload = multer({
 const uploadJson = multer({
   storage: multerMemoryStorage,
   fileFilter: (req, file, cb) => {
-    if (file.mimetype === 'application/json') {
+    if (FILE_UPLOAD.ALLOWED_JSON_TYPES.includes(file.mimetype)) {
       cb(null, true);
     } else {
       cb(new AppError('Chỉ chấp nhận file JSON!', 400), false);
     }
   },
   limits: {
-    fileSize: 50 * 1024 * 1024 // Giới hạn kích thước file JSON là 50 MB
+    fileSize: FILE_UPLOAD.MAX_JSON_FILE_SIZE // Giới hạn kích thước file JSON
   }
 });
 
@@ -60,11 +67,72 @@ exports.uploadSingleFile = (fieldName) => upload.single(fieldName);
 exports.uploadMultipleFiles = (fields) => upload.fields(fields);
 
 // Middleware để tải lên file JSON
-exports.uploadJsonFile = (fieldName) => uploadJson.single(fieldName);
+exports.uploadJsonFile = (fieldName) => {
+  return uploadJson.single(fieldName);
+};
 
-// Ví dụ sử dụng trong một route (được comment):
-// router.post('/upload-avatar', authController.protect, upload.uploadSingleFile('avatar'), userController.updateUserAvatar);
-// router.post('/upload-media', authController.protect, upload.uploadMultipleFiles([
-//   { name: 'images', maxCount: 5 },
-//   { name: 'audio', maxCount: 2 }
-// ]), someController.uploadMedia);
+// Middleware để tải lên nhiều file JSON
+exports.uploadMultipleJsonFiles = (fieldName, maxCount = FILE_UPLOAD.MAX_JSON_FILES_COUNT) => {
+  return multer({
+    storage: multerMemoryStorage,
+    fileFilter: (req, file, cb) => {
+      if (FILE_UPLOAD.ALLOWED_JSON_TYPES.includes(file.mimetype)) {
+        cb(null, true);
+      } else {
+        cb(new AppError('Chỉ chấp nhận file JSON!', 400), false);
+      }
+    },
+    limits: {
+      fileSize: FILE_UPLOAD.MAX_JSON_FILE_SIZE, // Giới hạn kích thước mỗi file JSON
+      files: maxCount // Giới hạn số lượng file
+    }
+  }).array(fieldName, maxCount);
+};
+
+// Middleware để tải lên nhiều file ảnh
+exports.uploadMultipleImages = (fieldName, maxCount = FILE_UPLOAD.MAX_IMAGE_FILES_COUNT) => {
+  return multer({
+    storage: multerStorage,
+    fileFilter: (req, file, cb) => {
+      if (FILE_UPLOAD.ALLOWED_IMAGE_TYPES.includes(file.mimetype)) {
+        cb(null, true);
+      } else {
+        cb(new AppError('Chỉ chấp nhận file ảnh!', 400), false);
+      }
+    },
+    limits: {
+      fileSize: FILE_UPLOAD.MAX_IMAGE_FILE_SIZE, // Giới hạn kích thước mỗi file ảnh
+      files: maxCount // Giới hạn số lượng file
+    }
+  }).array(fieldName, maxCount);
+};
+
+// Middleware để tải lên nhiều file documents
+exports.uploadMultipleDocuments = (fieldName, maxCount = FILE_UPLOAD.MAX_DOCUMENT_FILES_COUNT) => {
+  return multer({
+    storage: multerStorage,
+    fileFilter: (req, file, cb) => {
+      if (FILE_UPLOAD.ALLOWED_DOCUMENT_TYPES.includes(file.mimetype)) {
+        cb(null, true);
+      } else {
+        cb(new AppError('Chỉ chấp nhận file documents!', 400), false);
+      }
+    },
+    limits: {
+      fileSize: FILE_UPLOAD.MAX_DOCUMENT_FILE_SIZE, // Giới hạn kích thước mỗi file document
+      files: maxCount // Giới hạn số lượng file
+    }
+  }).array(fieldName, maxCount);
+};
+
+// Middleware để tải lên nhiều file hỗn hợp (JSON, ảnh, documents)
+exports.uploadMultipleMixedFiles = (fieldName, maxCount = FILE_UPLOAD.MAX_FILES_COUNT) => {
+  return multer({
+    storage: multerStorage,
+    fileFilter: multerFilter, // Sử dụng filter đã định nghĩa ở trên
+    limits: {
+      fileSize: FILE_UPLOAD.MAX_FILE_SIZE, // Giới hạn kích thước mỗi file
+      files: maxCount // Giới hạn số lượng file
+    }
+  }).array(fieldName, maxCount);
+};

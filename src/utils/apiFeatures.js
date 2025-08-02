@@ -1,3 +1,5 @@
+const { REQUEST, DATABASE } = require('./constants');
+
 class ApiFeatures {
   constructor(query, queryString) {
     this.query = query;
@@ -8,7 +10,7 @@ class ApiFeatures {
   // Filter method
   filter() {
     const queryObj = { ...this.queryString };
-    const excludedFields = ['page', 'sort', 'limit', 'fields'];
+    const excludedFields = ['page', 'sort', 'limit', 'fields', 'search'];
     
     excludedFields.forEach(el => delete queryObj[el]);
 
@@ -28,7 +30,7 @@ class ApiFeatures {
       const sortBy = this.queryString.sort.split(',').join(' ');
       this.query = this.query.sort(sortBy);
     } else {
-      this.query = this.query.sort('-createdAt');
+      this.query = this.query.sort(`${DATABASE.DEFAULT_SORT_ORDER === -1 ? '-' : ''}${DATABASE.DEFAULT_SORT_FIELD}`);
     }
 
     return this;
@@ -48,8 +50,14 @@ class ApiFeatures {
 
   // Pagination method
   paginate() {
-    this.page = this.queryString.page * 1 || 1;
-    this.limit = this.queryString.limit * 1 || 100;
+    this.page = this.queryString.page * 1 || REQUEST.DEFAULT_PAGE;
+    this.limit = this.queryString.limit * 1 || REQUEST.DEFAULT_LIMIT;
+    
+    // Giới hạn limit tối đa
+    if (this.limit > REQUEST.MAX_LIMIT) {
+      this.limit = REQUEST.MAX_LIMIT;
+    }
+    
     this.skip = (this.page - 1) * this.limit;
 
     this.query = this.query.skip(this.skip).limit(this.limit);
@@ -62,13 +70,15 @@ class ApiFeatures {
     if (this.queryString.search) {
       const searchQuery = {
         $or: [
-          { word: { $regex: this.queryString.search, $options: 'i' } },
+          { chinese: { $regex: this.queryString.search, $options: 'i' } },
           { pinyin: { $regex: this.queryString.search, $options: 'i' } },
-          { meaning: { $regex: this.queryString.search, $options: 'i' } }
+          { 'meaning.primary': { $regex: this.queryString.search, $options: 'i' } },
+          { 'meaning.secondary': { $regex: this.queryString.search, $options: 'i' } }
         ]
       };
 
-      this.filterQuery = { ...this.filterQuery, ...searchQuery };
+      // Ghi đè filter query hiện tại với search query
+      this.filterQuery = searchQuery;
       this.query = this.query.find(this.filterQuery);
     }
 

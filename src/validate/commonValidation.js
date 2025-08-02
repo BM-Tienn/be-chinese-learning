@@ -8,10 +8,8 @@ const handleValidationErrors = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const errorMessages = errors.array().map(error => error.msg);
-    console.log(`Validation failed for ${req.method} ${req.path}:`, errorMessages);
     return next(new AppError(`Validation failed: ${errorMessages.join(', ')}`, 400));
   }
-  console.log(`Validation passed for ${req.method} ${req.path}`);
   next();
 };
 

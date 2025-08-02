@@ -7,8 +7,10 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const compression = require('compression');
+const cookieParser = require('cookie-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpecs = require('./config/swagger');
+const { REQUEST, SECURITY } = require('./utils/constants');
 
 // Import middleware
 const { applySecurityMiddleware } = require('./middlewares/security');
@@ -34,8 +36,11 @@ connectDB();
 applySecurityMiddleware(app);
 
 // Body parser middleware
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(express.json({ limit: REQUEST.MAX_BODY_SIZE }));
+app.use(express.urlencoded({ extended: true, limit: REQUEST.MAX_URL_ENCODED_SIZE }));
+
+// Cookie parser middleware
+app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
@@ -54,10 +59,10 @@ app.use(requestLogger);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  origin: SECURITY.CORS.ALLOWED_ORIGINS,
+  credentials: SECURITY.CORS.CREDENTIALS,
+  methods: SECURITY.CORS.ALLOWED_METHODS,
+  allowedHeaders: SECURITY.CORS.ALLOWED_HEADERS
 }));
 
 // API Documentation
@@ -79,10 +84,10 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
-app.use('/api/v1/auth', authRoutes);
-app.use('/api/v1/users', userRoutes);
-app.use('/api/v1/vocabularies', vocabularyRoutes);
-app.use('/api/v1/words', wordRoutes);
+app.use(`${REQUEST.API_PREFIX}/auth`, authRoutes);
+app.use(`${REQUEST.API_PREFIX}/users`, userRoutes);
+app.use(`${REQUEST.API_PREFIX}/vocabularies`, vocabularyRoutes);
+app.use(`${REQUEST.API_PREFIX}/words`, wordRoutes);
 
 // 404 handler
 app.all('*', (req, res, next) => {

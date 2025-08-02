@@ -1,7 +1,8 @@
 const express = require('express');
 const vocabularyController = require('../controllers/vocabularyController'); // Import vocabularyController instance
 const authController = require('../controllers/authController'); // Import authController for middleware
-const { uploadJsonFile } = require('../middlewares/upload'); // Import upload middleware
+const { uploadJsonFile, uploadMultipleJsonFiles } = require('../middlewares/upload'); // Import upload middleware
+const { FILE_UPLOAD } = require('../utils/constants'); // Import constants
 const { uploadLogger } = require('../middlewares/requestLogger'); // Import upload logger middleware
 const { uploadRateLimitStore } = require('../middlewares/security'); // Import upload rate limit store
 const { 
@@ -219,7 +220,7 @@ router
 
 /**
  * @swagger
- * /vocabularies/upload-cedict:
+ * /vocabularies/upload:
  *   post:
  *     summary: Upload file JSON từ CC-CEDICT vào vocabulary database (Admin)
  *     tags: [Vocabularies]
@@ -235,7 +236,8 @@ router
  *               file:
  *                 type: string
  *                 format: binary
- *                 description: File JSON cần upload
+ *                 description: File JSON cần upload (chỉ chấp nhận file .json)
+ *                 example: "cedict_data.json"
  *             required:
  *               - file
  *     responses:
@@ -320,12 +322,6 @@ router
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
- *       404:
- *         description: Không tìm thấy file JSON
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Lỗi server khi xử lý file JSON
  *         content:
@@ -333,43 +329,118 @@ router
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-// Middleware để log request upload-cedict
-const uploadCedictLogger = (req, res, next) => {
-  console.log('=== UPLOAD CEDICT ROUTE TRIGGERED ===');
-  console.log('Thời gian:', new Date().toISOString());
-  console.log('Method:', req.method);
-  console.log('URL:', req.originalUrl);
-  console.log('Headers:', req.headers);
-  console.log('Body keys:', Object.keys(req.body || {}));
-  console.log('File:', req.file ? {
-    fieldname: req.file.fieldname,
-    originalname: req.file.originalname,
-    mimetype: req.file.mimetype,
-    size: req.file.size
-  } : 'Không có file');
-  console.log('=====================================');
-  next();
-};
-
-// Route test để kiểm tra upload-cedict có hoạt động không
-router.get('/upload-cedict/test', (req, res) => {
-  console.log('=== UPLOAD CEDICT TEST ROUTE ===');
-  console.log('Thời gian:', new Date().toISOString());
-  console.log('Method:', req.method);
-  console.log('URL:', req.originalUrl);
-  console.log('Headers:', req.headers);
-  console.log('================================');
-  
-  res.status(200).json({
-    success: true,
-    message: 'Route upload-cedict hoạt động bình thường',
-    timestamp: new Date().toISOString()
-  });
-});
 
 router
-  .route('/upload-cedict')
-  .post(uploadJsonFile('file'), uploadLogger, uploadCedictLogger, vocabularyController.uploadCedictJson);
+  .route('/upload')
+  .post(
+    uploadJsonFile('file'),
+    vocabularyController.uploadCedictJson
+  );
+
+/**
+ * @swagger
+ * /vocabularies/upload-multiple:
+ *   post:
+ *     summary: Upload nhiều file CC-CEDICT JSON cùng lúc (Admin)
+ *     tags: [Vocabularies]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               files:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: binary
+ *                 description: Danh sách các file JSON CC-CEDICT (tối đa 20 files)
+ *     responses:
+ *       200:
+ *         description: Upload thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *                 message:
+ *                   type: string
+ *                   example: "Upload 3 files hoàn tất: 1500 thành công, 50 thất bại, 25 bỏ qua"
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     summary:
+ *                       type: string
+ *                       description: Tóm tắt kết quả
+ *                     totalFiles:
+ *                       type: number
+ *                       description: Tổng số file đã upload
+ *                     totalItems:
+ *                       type: number
+ *                       description: Tổng số từ vựng đã xử lý
+ *                     totalSuccess:
+ *                       type: number
+ *                       description: Số từ vựng thành công
+ *                     totalFailed:
+ *                       type: number
+ *                       description: Số từ vựng thất bại
+ *                     totalSkipped:
+ *                       type: number
+ *                       description: Số từ vựng bỏ qua
+ *                     filesResults:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           fileName:
+ *                             type: string
+ *                           fileSize:
+ *                             type: number
+ *                           status:
+ *                             type: string
+ *                             enum: [success, error]
+ *                           results:
+ *                             type: object
+ *                           error:
+ *                             type: string
+ *       400:
+ *         description: Lỗi validation hoặc không có file
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Chưa xác thực hoặc token không hợp lệ
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       403:
+ *         description: Không có quyền truy cập (cần quyền admin)
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server khi xử lý files
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+
+router
+  .route('/upload-multiple')
+  .post(
+    uploadMultipleJsonFiles('files', FILE_UPLOAD.MAX_JSON_FILES_COUNT),
+    vocabularyController.uploadMultipleCedictJson
+  );
 
 /**
  * @swagger
@@ -583,45 +654,5 @@ router
   .get(validateObjectId, vocabularyController.getVocabulary) // Can be public or restricted based on requirement
   .patch(validateObjectId, validateUpdateVocabulary, vocabularyController.updateVocabulary)
   .delete(validateObjectId, vocabularyController.deleteVocabulary);
-
-// Development endpoint để reset rate limit (chỉ trong môi trường development)
-if (process.env.NODE_ENV === 'development') {
-  /**
-   * @swagger
-   * /vocabularies/reset-rate-limit:
-   *   post:
-   *     summary: Reset rate limit cho upload (Development only)
-   *     tags: [Vocabularies]
-   *     security:
-   *       - bearerAuth: []
-   *     responses:
-   *       200:
-   *         description: Rate limit đã được reset
-   *         content:
-   *           application/json:
-   *             schema:
-   *               type: object
-   *               properties:
-   *                 status:
-   *                   type: string
-   *                   example: "success"
-   *                 message:
-   *                   type: string
-   *                   example: "Rate limit đã được reset"
-   *       401:
-   *         description: Chưa xác thực
-   *       403:
-   *         description: Không có quyền truy cập
-   */
-  router.post('/reset-rate-limit', (req, res) => {
-    // Reset rate limit bằng cách clear store
-    uploadRateLimitStore.clear();
-    
-    return res.status(200).json({
-      status: 'success',
-      message: 'Rate limit đã được reset'
-    });
-  });
-}
 
 module.exports = router;

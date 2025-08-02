@@ -16,6 +16,7 @@ class VocabularyController {
   getAllVocabularies = catchAsync(async (req, res, next) => {
     const features = new APIFeatures(Vocabulary.find(), req.query)
       .filter()
+      .search()
       .sort()
       .limitFields()
       .paginate();
@@ -96,12 +97,6 @@ class VocabularyController {
    * @access Private (Admin only)
    */
   uploadCedictJson = catchAsync(async (req, res, next) => {
-    console.log('=== UPLOAD CEDICT CONTROLLER STARTED ===');
-    console.log('Thời gian bắt đầu:', new Date().toISOString());
-    console.log('Request body:', req.body);
-    console.log('Request file:', req.file);
-    console.log('Request headers:', req.headers);
-    
     const startTime = Date.now();
     uploadRateLimitStore.clear();
     
@@ -140,12 +135,6 @@ class VocabularyController {
 
       // Tạo thông báo tổng kết
       const summary = `Upload hoàn tất: ${results.success} thành công, ${results.failed} thất bại, ${results.skipped} bỏ qua`;
-
-      console.log('=== UPLOAD CEDICT CONTROLLER SUCCESS ===');
-      console.log('Thời gian hoàn thành:', new Date().toISOString());
-      console.log('Kết quả:', results);
-      console.log('Thời gian xử lý:', `${duration}ms`);
-      console.log('=========================================');
       
       return ApiResponse.success(res, 200, {
         summary,
@@ -165,12 +154,116 @@ class VocabularyController {
         }
       });
       
-      console.log('=== UPLOAD CEDICT CONTROLLER ERROR ===');
-      console.log('Thời gian lỗi:', new Date().toISOString());
-      console.log('Lỗi:', error.message);
-      console.log('Stack trace:', error.stack);
-      console.log('Thời gian xử lý:', `${duration}ms`);
-      console.log('=======================================');
+      return next(new AppError(error.message, 500));
+    }
+  });
+
+  /**
+   * @desc Admin-only: Upload multiple CC-CEDICT JSON files to vocabulary database
+   * @route POST /api/v1/vocabularies/upload-multiple
+   * @access Private (Admin only)
+   */
+  uploadMultipleCedictJson = catchAsync(async (req, res, next) => {
+    const startTime = Date.now();
+    
+    // Kiểm tra files upload
+    if (!req.files || req.files.length === 0) {
+      await logger.logError(req, new Error('Không có file JSON nào được cung cấp'), {
+        action: 'UPLOAD_MULTIPLE_CC_CEDICT',
+        error: 'NO_FILES_PROVIDED'
+      });
+      return next(new AppError('Không có file JSON nào được cung cấp', 400));
+    }
+
+    try {
+      // Log bắt đầu upload
+      await logger.logActivity(req, 'MULTIPLE_CC_CEDICT_UPLOAD_START', {
+        filesCount: req.files.length,
+        files: req.files.map(file => ({
+          name: file.originalname,
+          size: file.size,
+          mimetype: file.mimetype
+        }))
+      });
+
+      const allResults = [];
+      let totalSuccess = 0;
+      let totalFailed = 0;
+      let totalSkipped = 0;
+      let totalItems = 0;
+
+      // Xử lý từng file một cách tuần tự
+      for (let i = 0; i < req.files.length; i++) {
+        const file = req.files[i];
+        
+        try {
+          // Sử dụng service để xử lý upload từ file object
+          const results = await cedictService.uploadCedictFileFromUpload(file);
+          
+          allResults.push({
+            fileName: file.originalname,
+            fileSize: file.size,
+            results: results,
+            status: 'success'
+          });
+          
+          totalSuccess += results.success;
+          totalFailed += results.failed;
+          totalSkipped += results.skipped;
+          totalItems += results.total;
+          
+        } catch (fileError) {
+          allResults.push({
+            fileName: file.originalname,
+            fileSize: file.size,
+            error: fileError.message,
+            status: 'error'
+          });
+          
+          totalFailed += 1;
+        }
+      }
+
+      const duration = Date.now() - startTime;
+      
+      // Log kết quả upload chi tiết
+      await logger.logCedictUpload(req, { originalname: 'multiple_files' }, {
+        total: totalItems,
+        success: totalSuccess,
+        failed: totalFailed,
+        skipped: totalSkipped,
+        filesProcessed: req.files.length
+      });
+
+      // Log performance
+      await logger.logPerformance(req, 'MULTIPLE_CC_CEDICT_UPLOAD', duration, {
+        totalFiles: req.files.length,
+        totalItems: totalItems,
+        successRate: totalItems > 0 ? `${((totalSuccess / totalItems) * 100).toFixed(2)}%` : '0%'
+      });
+
+      // Tạo thông báo tổng kết
+      const summary = `Upload ${req.files.length} files hoàn tất: ${totalSuccess} thành công, ${totalFailed} thất bại, ${totalSkipped} bỏ qua`;
+      
+      return ApiResponse.success(res, 200, {
+        summary,
+        totalFiles: req.files.length,
+        totalItems,
+        totalSuccess,
+        totalFailed,
+        totalSkipped,
+        filesResults: allResults
+      }, null, summary);
+
+    } catch (error) {
+      const duration = Date.now() - startTime;
+      
+      // Log lỗi upload
+      await logger.logError(req, error, {
+        action: 'MULTIPLE_CC_CEDICT_UPLOAD',
+        duration: `${duration}ms`,
+        filesCount: req.files?.length || 0
+      });
       
       return next(new AppError(error.message, 500));
     }
