@@ -1,0 +1,2590 @@
+[
+  {
+    "word": "應收賬款",
+    "pinyin": "yìngshōuzhàngkuǎn",
+    "vietnameseReading": "Ứng thu trướng khoản",
+    "meaning": {
+      "primary": "Khoản phải thu (trong kế toán)",
+      "secondary": [],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 50,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "我們的應收賬款增加了。",
+        "pinyin": "Wǒmen de yìngshōuzhàngkuǎn zēngjiā le.",
+        "vietnamese": "Khoản phải thu của chúng tôi đã tăng lên."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [
+        "應付賬款 (yìngfùzhàngkuǎn - Khoản phải trả)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "應敵",
+    "pinyin": "yìngdí",
+    "vietnameseReading": "Ứng địch",
+    "meaning": {
+      "primary": "Đối phó với kẻ địch; chống lại kẻ thù",
+      "secondary": [
+        "Đón đánh"
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 40,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他們訓練士兵如何應敵。",
+        "pinyin": "Tāmen xùnliàn shìbīng rúhé yìngdí.",
+        "vietnamese": "Họ huấn luyện binh lính cách đối phó với kẻ thù."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "迎戰 (yíngzhàn - Đón đánh)",
+        "抗敵 (kàngdí - Chống địch)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "應時",
+    "pinyin": "yìngshí",
+    "vietnameseReading": "Ứng thời",
+    "meaning": {
+      "primary": "Đúng lúc, đúng thời điểm; phù hợp với thời tiết/mùa",
+      "secondary": [
+        "Hợp thời, kịp thời"
+      ],
+      "partOfSpeech": "tính từ"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 55,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "這些水果都是應時的。",
+        "pinyin": "Zhèxiē shuǐguǒ dōu shì yìngshí de.",
+        "vietnamese": "Những loại trái cây này đều đúng mùa."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "及時 (jíshí - Kịp thời)",
+        "合時 (héshí - Đúng thời)"
+      ],
+      "antonyms": [
+        "過時 (guòshí - Lỗi thời)"
+      ],
+      "compounds": [
+        "應時令 (yìngshílìng - Đúng mùa)"
+      ]
+    }
+  },
+  {
+    "word": "應景",
+    "pinyin": "yìngjǐng",
+    "vietnameseReading": "Ứng cảnh",
+    "meaning": {
+      "primary": "Phù hợp với khung cảnh, tình hình hoặc dịp lễ nào đó",
+      "secondary": [
+        "Mang tính biểu tượng cho dịp lễ hội"
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 60,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "我們買了一些應景的裝飾品。",
+        "pinyin": "Wǒmen mǎi le yīxiē yìngjǐng de zhuāngshìpǐn.",
+        "vietnamese": "Chúng tôi đã mua một vài đồ trang trí phù hợp với không khí lễ hội."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "應節 (yìngjié - Đúng dịp lễ)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "應景兒 (yìngjǐngr - Phiên bản儿 hóa của 應景)"
+      ]
+    }
+  },
+  {
+    "word": "應景兒",
+    "pinyin": "yìngjǐngr",
+    "vietnameseReading": "Ứng cảnh nhi",
+    "meaning": {
+      "primary": "Phù hợp với khung cảnh, tình hình hoặc dịp lễ nào đó (thường dùng trong văn nói, mang tính chất thân mật hơn 應景)",
+      "secondary": [
+        "Mang tính biểu tượng cho dịp lễ hội (phiên bản儿 hóa)"
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 65,
+      "formality": "informal"
+    },
+    "examples": [
+      {
+        "chinese": "這燈籠很應景兒。",
+        "pinyin": "Zhè dēnglóng hěn yìngjǐngr.",
+        "vietnamese": "Chiếc đèn lồng này rất hợp với không khí lễ hội."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "應景 (yìngjǐng - Phù hợp khung cảnh/dịp lễ)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "應用數學",
+    "pinyin": "Yìngyòng shùxué",
+    "vietnameseReading": "Ứng dụng toán học",
+    "meaning": {
+      "primary": "Ngành toán học tập trung vào các kỹ thuật toán học được sử dụng trong khoa học, kỹ thuật và kinh doanh.",
+      "secondary": [
+        "Toán học ứng dụng",
+        "Toán học thực tiễn"
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 65,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "他在大學學習應用數學。",
+        "pinyin": "Tā zài dàxué xuéxí yìngyòng shùxué.",
+        "vietnamese": "Anh ấy học ứng dụng toán học ở trường đại học."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "實用數學 (Shíyòng shùxué - Toán học thực dụng)"
+      ],
+      "antonyms": [
+        "純粹數學 (Chúncùi shùxué - Toán học thuần túy)"
+      ],
+      "compounds": [
+        "數學 (Shùxué - Toán học)",
+        "應用 (Yìngyòng - Ứng dụng)"
+      ]
+    }
+  },
+  {
+    "word": "應用文",
+    "pinyin": "Yìngyòngwén",
+    "vietnameseReading": "Ứng dụng văn, Văn bản ứng dụng",
+    "meaning": {
+      "primary": "Loại văn bản được sử dụng cho mục đích thực tế và công việc hàng ngày, chẳng hạn như thư tín, báo cáo, thông báo.",
+      "secondary": [
+        "Văn bản hành chính",
+        "Thư tín thương mại"
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 50,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他正在學習如何撰寫應用文。",
+        "pinyin": "Tā zhèngzài xuéxí rúhé zhuànxiě yìngyòngwén.",
+        "vietnamese": "Anh ấy đang học cách viết văn bản ứng dụng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "公文 (Gōngwén - Công văn)"
+      ],
+      "antonyms": [
+        "文學作品 (Wénxué zuòpǐn - Tác phẩm văn học)"
+      ],
+      "compounds": [
+        "應用 (Yìngyòng - Ứng dụng)",
+        "文章 (Wénzhāng - Bài văn, văn bản)"
+      ]
+    }
+  },
+  {
+    "word": "應用物理",
+    "pinyin": "Yìngyòng wùlǐ",
+    "vietnameseReading": "Ứng dụng vật lý",
+    "meaning": {
+      "primary": "Lĩnh vực vật lý tập trung vào việc áp dụng các nguyên lý vật lý vào công nghệ và các ứng dụng thực tế.",
+      "secondary": [
+        "Vật lý ứng dụng"
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 60,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "應用物理在許多工程領域都有廣泛的應用。",
+        "pinyin": "Yìngyòng wùlǐ zài xǔduō gōngchéng lǐngyù dōu yǒu guǎngfàn de yìngyòng.",
+        "vietnamese": "Ứng dụng vật lý có nhiều ứng dụng rộng rãi trong nhiều lĩnh vực kỹ thuật."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "實用物理 (Shíyòng wùlǐ - Vật lý thực dụng)"
+      ],
+      "antonyms": [
+        "純物理 (Chúnpù wùlǐ - Vật lý thuần túy)"
+      ],
+      "compounds": [
+        "物理 (Wùlǐ - Vật lý)",
+        "應用 (Yìngyòng - Ứng dụng)"
+      ]
+    }
+  },
+  {
+    "word": "應用科學",
+    "pinyin": "Yìngyòng kēxué",
+    "vietnameseReading": "Ứng dụng khoa học",
+    "meaning": {
+      "primary": "Các ngành khoa học tập trung vào việc áp dụng kiến thức khoa học vào các vấn đề thực tế và phát triển công nghệ.",
+      "secondary": [
+        "Khoa học ứng dụng"
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 70,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "工程學是應用科學的一個重要分支。",
+        "pinyin": "Gōngchéngxué shì yìngyòng kēxué de yīgè zhòngyào fēnzhī.",
+        "vietnamese": "Kỹ thuật là một nhánh quan trọng của khoa học ứng dụng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "實用科學 (Shíyòng kēxué - Khoa học thực dụng)"
+      ],
+      "antonyms": [
+        "基礎科學 (Jīchǔ kēxué - Khoa học cơ bản)"
+      ],
+      "compounds": [
+        "科學 (Kēxué - Khoa học)",
+        "應用 (Yìngyòng - Ứng dụng)"
+      ]
+    }
+  },
+  {
+    "word": "應用程序",
+    "pinyin": "Yìngyòng chéngxù",
+    "vietnameseReading": "Ứng dụng trình tự, Chương trình ứng dụng",
+    "meaning": {
+      "primary": "Một chương trình máy tính được thiết kế để thực hiện một tác vụ cụ thể cho người dùng, trái ngược với chương trình hệ thống.",
+      "secondary": [
+        "Phần mềm ứng dụng",
+        "Ứng dụng"
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 80,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "你可以從應用程序商店下載這款遊戲。",
+        "pinyin": "Nǐ kěyǐ cóng yìngyòng chéngxù shāngdiàn xiàzài zhè kuǎn yóuxì.",
+        "vietnamese": "Bạn có thể tải trò chơi này từ cửa hàng ứng dụng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "應用軟件 (Yìngyòng ruǎnjiàn - Phần mềm ứng dụng)",
+        "App (App - Ứng dụng)"
+      ],
+      "antonyms": [
+        "操作系統 (Cāozuò xìtǒng - Hệ điều hành)",
+        "系統軟件 (Xìtǒng ruǎnjiàn - Phần mềm hệ thống)"
+      ],
+      "compounds": [
+        "應用 (Yìngyòng - Ứng dụng)",
+        "程序 (Chéngxù - Chương trình)"
+      ]
+    }
+  },
+  {
+    "word": "懲一儆百",
+    "pinyin": "chéng yī jǐng bǎi",
+    "vietnameseReading": "Trừng nhất cảnh bách",
+    "meaning": {
+      "primary": "Trừng trị một người để răn đe trăm người; phạt một người để làm gương cho nhiều người khác.",
+      "secondary": [
+        "Lấy một ví dụ điển hình để cảnh cáo số đông.",
+        "Một hành động mang tính răn đe mạnh mẽ."
+      ],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 75,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "对于这种严重的舞弊行为，我们必须惩一儆百。",
+        "pinyin": "Duìyú zhè zhǒng yánzhòng de wǔbì xíngwéi, wǒmen bìxū chéng yī jǐng bǎi.",
+        "vietnamese": "Đối với hành vi gian lận nghiêm trọng này, chúng ta phải trừng trị một người để răn đe trăm người."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "殺雞儆猴 (shā jī jǐng hóu - Giết gà dọa khỉ)",
+        "殺一儆百 (shā yī jǐng bǎi - Giết một răn trăm)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲一警百",
+    "pinyin": "chéng yī jǐng bǎi",
+    "vietnameseReading": "Trừng nhất cảnh bách",
+    "meaning": {
+      "primary": "Là một biến thể hoặc cách viết khác của '懲一儆百', mang ý nghĩa trừng trị một người để răn đe trăm người.",
+      "secondary": [
+        "Phạt một người để làm gương cho số đông.",
+        "Sử dụng một trường hợp cụ thể để cảnh tỉnh những người khác."
+      ],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 60,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "为了杜绝此类事件再次发生，我们决定惩一警百。",
+        "pinyin": "Wèile dùjué cǐ lèi shìjiàn zàicì fāshēng, wǒmen juédìng chéng yī jǐng bǎi.",
+        "vietnamese": "Để ngăn chặn các sự việc tương tự tái diễn, chúng tôi quyết định trừng trị một người để răn đe trăm người."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "懲一儆百 (chéng yī jǐng bǎi - Trừng một răn trăm)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲前毖後",
+    "pinyin": "chéng qián bì hòu",
+    "vietnameseReading": "Trừng tiền bị hậu",
+    "meaning": {
+      "primary": "Rút kinh nghiệm từ những sai lầm, khuyết điểm đã qua để phòng tránh, không mắc phải lỗi tương tự trong tương lai.",
+      "secondary": [
+        "Học hỏi từ kinh nghiệm đau thương của quá khứ.",
+        "Lấy bài học từ thất bại để không tái phạm."
+      ],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 80,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "我们必须惩前毖後，从历史中吸取教训。",
+        "pinyin": "Wǒmen bìxū chéng qián bì hòu, cóng lìshǐ zhōng xīqǔ jiàoxùn.",
+        "vietnamese": "Chúng ta phải rút kinh nghiệm từ quá khứ để tránh mắc lại sai lầm, rút ra bài học từ lịch sử."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "記取教訓 (jì qǔ jiàoxùn - Ghi nhớ bài học)",
+        "前車之鑑 (qián chē zhī jiàn - Gương xe trước)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲惡勸善",
+    "pinyin": "chéng è quàn shàn",
+    "vietnameseReading": "Trừng ác khuyến thiện",
+    "meaning": {
+      "primary": "Trừng trị cái ác và khuyến khích làm điều thiện.",
+      "secondary": [
+        "Loại bỏ cái xấu và cổ vũ những hành động tốt đẹp.",
+        "Giáo dục và cải tạo xã hội thông qua việc xử lý cái ác và tuyên dương cái thiện."
+      ],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 85,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "许多文学作品都以惩恶劝善为主题。",
+        "pinyin": "Xǔduō wénxué zuòpǐn dōu yǐ chéng è quàn shàn wéi zhǔtí.",
+        "vietnamese": "Nhiều tác phẩm văn học đều lấy việc trừng trị cái ác và khuyến khích cái thiện làm chủ đề."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "揚善懲惡 (yáng shàn chéng è - Tuyên dương thiện trừng ác)",
+        "除惡揚善 (chú è yáng shàn - Trừ ác dương thiện)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲惡揚善",
+    "pinyin": "chéng è yáng shàn",
+    "vietnameseReading": "Trừng ác dương thiện",
+    "meaning": {
+      "primary": "Trừng trị cái ác và tuyên dương, ca ngợi cái thiện.",
+      "secondary": [
+        "Tiêu diệt cái xấu và đề cao những giá trị tốt đẹp.",
+        "Một triết lý đạo đức nhằm duy trì trật tự xã hội."
+      ],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 90,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "法治社会的根本目标就是惩恶扬善。",
+        "pinyin": "Fǎzhì shèhuì de gēnběn mùbiāo jiùshì chéng è yáng shàn.",
+        "vietnamese": "Mục tiêu cơ bản của một xã hội pháp quyền là trừng trị cái ác và tuyên dương cái thiện."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "懲惡勸善 (chéng è quàn shàn - Trừng ác khuyến thiện)",
+        "除暴安良 (chú bào ān liáng - Trừ bạo an lương)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲戒",
+    "pinyin": "chéngjiè",
+    "vietnameseReading": "Trừng giới",
+    "meaning": {
+      "primary": "Trừng phạt, răn đe.",
+      "secondary": [
+        "Khiển trách nặng nề để cảnh cáo",
+        "Trừng phạt để giáo dục"
+      ],
+      "partOfSpeech": "Động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 40,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "對違規者進行懲戒。",
+        "pinyin": "Duì wéiguīzhě jìnxíng chéngjiè.",
+        "vietnamese": "Tiến hành trừng giới đối với người vi phạm quy định."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "懲罰 (chéngfá - Trừng phạt)",
+        "處罰 (chǔfá - Xử phạt)",
+        "懲治 (chéngzhì - Trừng trị)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲治",
+    "pinyin": "chéngzhì",
+    "vietnameseReading": "Trừng trị",
+    "meaning": {
+      "primary": "Trừng phạt nghiêm khắc, trừng trị.",
+      "secondary": [
+        "Xử lý, đàn áp những hành vi sai trái"
+      ],
+      "partOfSpeech": "Động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 50,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "嚴厲懲治腐敗分子。",
+        "pinyin": "Yánlì chéngzhì fǔbài fēnzǐ.",
+        "vietnamese": "Trừng trị nghiêm khắc những phần tử tham nhũng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "懲罰 (chéngfá - Trừng phạt)",
+        "處罰 (chǔfá - Xử phạt)",
+        "制裁 (zhìcái - Chế tài)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲罰",
+    "pinyin": "chéngfá",
+    "vietnameseReading": "Trừng phạt",
+    "meaning": {
+      "primary": "Trừng phạt, xử phạt.",
+      "secondary": [
+        "Đưa ra hình phạt vì hành vi sai trái hoặc phạm lỗi",
+        "Trừng trị"
+      ],
+      "partOfSpeech": "Động từ, Danh từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 75,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他因偷竊而受到懲罰。",
+        "pinyin": "Tā yīn tōuqìè ér shòudào chéngfá.",
+        "vietnamese": "Anh ta bị trừng phạt vì tội ăn cắp."
+      },
+      {
+        "chinese": "這是對他的懲罰。",
+        "pinyin": "Zhè shì duì tā de chéngfá.",
+        "vietnamese": "Đây là hình phạt dành cho anh ta."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "處罰 (chǔfá - Xử phạt)",
+        "懲戒 (chéngjiè - Trừng giới)",
+        "懲治 (chéngzhì - Trừng trị)"
+      ],
+      "antonyms": [
+        "獎勵 (jiǎnglì - Khen thưởng)"
+      ],
+      "compounds": [
+        "懲罰性 (chéngfáxìng - Tính trừng phạt)",
+        "嚴懲 (yánchéng - Nghiêm trừng)"
+      ]
+    }
+  },
+  {
+    "word": "懲罰性",
+    "pinyin": "chéngfáxìng",
+    "vietnameseReading": "Trừng phạt tính",
+    "meaning": {
+      "primary": "Mang tính chất trừng phạt, có tính trừng phạt.",
+      "secondary": [
+        "Có mục đích trừng phạt"
+      ],
+      "partOfSpeech": "Tính từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 35,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "法院判決被告支付懲罰性賠償。",
+        "pinyin": "Fǎyuàn pànjué bèigào zhīfù chéngfáxìng péicháng.",
+        "vietnamese": "Tòa án phán quyết bị cáo phải trả bồi thường mang tính trừng phạt."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲處",
+    "pinyin": "chéngchǔ",
+    "vietnameseReading": "Trừng xứ / Trừng xử",
+    "meaning": {
+      "primary": "Trừng phạt và xử lý; xử phạt.",
+      "secondary": [
+        "Áp dụng hình phạt và biện pháp xử lý"
+      ],
+      "partOfSpeech": "Động từ, Danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 60,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "對失職人員進行懲處。",
+        "pinyin": "Duì shīzhí rényuán jìnxíng chéngchǔ.",
+        "vietnamese": "Tiến hành trừng phạt và xử lý đối với những người không làm tròn trách nhiệm."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "處罰 (chǔfá - Xử phạt)",
+        "懲罰 (chéngfá - Trừng phạt)",
+        "懲治 (chéngzhì - Trừng trị)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "懲辦",
+    "pinyin": "chéngbàn",
+    "vietnameseReading": "Trừng phạt, trừng trị",
+    "meaning": {
+      "primary": "Trừng phạt; trừng trị.",
+      "secondary": [],
+      "partOfSpeech": "Động từ"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 65,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "对那些违法乱纪的人要严加惩办。",
+        "pinyin": "Duì nàxiē wéifǎ luànjì de rén yào yán jiā chéngbàn.",
+        "vietnamese": "Phải nghiêm khắc trừng trị những kẻ vi phạm pháp luật và kỷ cương."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "处罚 (chǔfá - trừng phạt)",
+        "惩罚 (chéngfá - trừng phạt)",
+        "处分 (chǔfèn - xử phạt)"
+      ],
+      "antonyms": [
+        "奖励 (jiǎnglì - khen thưởng)",
+        "宽恕 (kuānshù - tha thứ)"
+      ],
+      "compounds": [
+        "惩罚 (chéngfá - trừng phạt)",
+        "惩戒 (chéngjiè - trừng giới)"
+      ]
+    }
+  },
+  {
+    "word": "懵",
+    "pinyin": "méng",
+    "vietnameseReading": "Mông lung, mơ hồ, ngơ ngác, choáng váng",
+    "meaning": {
+      "primary": "Mơ hồ; không rõ ràng (thường dùng để diễn tả trạng thái tinh thần, cảm xúc).",
+      "secondary": [
+        "Ngơ ngác; không hiểu gì.",
+        "Choáng váng; choáng váng đầu óc."
+      ],
+      "partOfSpeech": "Tính từ / Động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 78,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他被突如其来的消息弄懵了。",
+        "pinyin": "Tā bèi tūrúqílái de xiāoxī nòng méng le.",
+        "vietnamese": "Anh ấy bị tin tức bất ngờ làm cho ngơ ngác."
+      },
+      {
+        "chinese": "我被这个问题问懵了。",
+        "pinyin": "Wǒ bèi zhège wèntí wèn méng le.",
+        "vietnamese": "Tôi bị hỏi câu này mà ngớ người ra."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "糊涂 (hútu - hồ đồ, lơ mơ)",
+        "迷茫 (mímáng - mơ hồ, hoang mang)",
+        "发愣 (fālèng - ngẩn người)"
+      ],
+      "antonyms": [
+        "清醒 (qīngxǐng - tỉnh táo)",
+        "明白 (míngbái - rõ ràng)"
+      ],
+      "compounds": [
+        "懵懂 (méngdǒng - ngây thơ, ngơ ngác)",
+        "懵逼 (méngbī - đần mặt, ngơ người)",
+        "一头雾水 (yītóuwùshuǐ - đầu óc mơ hồ, không hiểu gì)"
+      ]
+    }
+  },
+  {
+    "word": "懵懂",
+    "pinyin": "méngdǒng",
+    "vietnameseReading": "Mông lung, ngây thơ, ngơ ngác, chưa hiểu đời",
+    "meaning": {
+      "primary": "Ngây thơ; ngây ngô; chưa hiểu biết sự đời.",
+      "secondary": [
+        "Mơ hồ; không rõ ràng."
+      ],
+      "partOfSpeech": "Tính từ"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 72,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "懵懂的少年时代。",
+        "pinyin": "Méngdǒng de shàonián shídài.",
+        "vietnamese": "Thời niên thiếu ngây thơ."
+      },
+      {
+        "chinese": "他对很多事情还很懵懂。",
+        "pinyin": "Tā duì hěnduō shìqíng hái hěn méngdǒng.",
+        "vietnamese": "Anh ấy vẫn còn rất ngơ ngác về nhiều chuyện."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "无知 (wúzhī - vô tri)",
+        "幼稚 (yòuzhì - ấu trĩ)",
+        "迷茫 (mímáng - mơ hồ)"
+      ],
+      "antonyms": [
+        "精明 (jīngmíng - tinh minh, sáng suốt)",
+        "老练 (lǎoliàn - lão luyện)"
+      ],
+      "compounds": [
+        "懵懂无知 (méngdǒngwúzhī - ngây thơ vô tri)",
+        "懵懵懂懂 (méngméngdǒngdǒng - ngơ ngác, lơ mơ)"
+      ]
+    }
+  },
+  {
+    "word": "懵懵懂懂",
+    "pinyin": "méngméngdǒngdǒng",
+    "vietnameseReading": "Mông mông đổng đổng, ngơ ngác, lơ mơ",
+    "meaning": {
+      "primary": "Ngơ ngác; lơ mơ; không rõ ràng (dạng láy từ của 懵懂, nhấn mạnh hơn).",
+      "secondary": [
+        "Trạng thái mơ màng, không hiểu rõ chuyện gì."
+      ],
+      "partOfSpeech": "Thành ngữ / Tính từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 55,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他懵懵懂懂地度过了童年。",
+        "pinyin": "Tā méngméngdǒngdǒng de dùguòle tóngnián.",
+        "vietnamese": "Anh ấy đã trải qua tuổi thơ một cách ngơ ngác."
+      },
+      {
+        "chinese": "刚开始学习的时候，我们都懵懵懂懂的。",
+        "pinyin": "Gāng kāishǐ xuéxí de shíhou, wǒmen dōu méngméngdǒngdǒng de.",
+        "vietnamese": "Lúc mới bắt đầu học, chúng tôi đều ngơ ngác lơ mơ."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "迷迷糊糊 (mímíhúhú - lơ mơ, mơ hồ)",
+        "浑浑噩噩 (húnhún'è'è - lơ mơ, hồ đồ)"
+      ],
+      "antonyms": [
+        "明明白白 (míngmíngbáibái - rõ ràng, minh bạch)",
+        "清清楚楚 (qīngqīngchǔchǔ - rõ ràng)"
+      ],
+      "compounds": [
+        "懵 (méng - ngơ ngác)",
+        "懂 (dǒng - hiểu)"
+      ]
+    }
+  },
+  {
+    "word": "懵逼",
+    "pinyin": "méngbī",
+    "vietnameseReading": "Mông bi, đần mặt, ngơ người, ngáo ngơ",
+    "meaning": {
+      "primary": "Đần mặt; ngơ người; ngáo ngơ (tiếng lóng, diễn tả trạng thái cực kỳ ngạc nhiên, bối rối đến mức không phản ứng được).",
+      "secondary": [
+        "Ngạc nhiên tột độ; bất ngờ không nói nên lời."
+      ],
+      "partOfSpeech": "Tiếng lóng / Tính từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 85,
+      "formality": "informal"
+    },
+    "examples": [
+      {
+        "chinese": "听到这个消息，我都懵逼了。",
+        "pinyin": "Tīng dào zhège xiāoxī, wǒ dōu méngbī le.",
+        "vietnamese": "Nghe tin này, tôi đần mặt ra luôn."
+      },
+      {
+        "chinese": "他一脸懵逼地看着我。",
+        "pinyin": "Tā yī liǎn méngbī de kànzhe wǒ.",
+        "vietnamese": "Anh ấy nhìn tôi với vẻ mặt ngơ người."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "傻眼 (shǎyǎn - ngớ người, ngạc nhiên)",
+        "蒙圈 (méngquān - lơ mơ, ngơ ngác)",
+        "呆滞 (dāizhì - đờ đẫn)"
+      ],
+      "antonyms": [
+        "清醒 (qīngxǐng - tỉnh táo)",
+        "明白 (míngbái - rõ ràng)"
+      ],
+      "compounds": [
+        "懵 (méng - ngơ ngác)"
+      ]
+    }
+  },
+  {
+    "word": "戀戰",
+    "pinyin": "liànzhàn",
+    "vietnameseReading": "luyến chiến",
+    "meaning": {
+      "primary": "Không muốn rời trận địa hoặc tiếp tục chiến đấu dù tình thế bất lợi; luyến tiếc chiến trường.",
+      "secondary": [
+        "Quyết tâm chiến đấu đến cùng.",
+        "Không muốn bỏ cuộc trong cuộc chiến."
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 35,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他在最後一刻仍然戀戰，不肯撤退。",
+        "pinyin": "Tā zài zuìhòu yīkè réngrán liànzhàn, bù kěn chètùi.",
+        "vietnamese": "Anh ta vẫn luyến chiến đến phút cuối cùng, không chịu rút lui."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "留戀 (liúliàn - lưu luyến - lưu luyến)",
+        "依戀 (yīliàn - y yến - quyến luyến, gắn bó)"
+      ],
+      "antonyms": [
+        "撤退 (chètuì - triệt thoái - rút lui)",
+        "投降 (tóuxiáng - đầu hàng - đầu hàng)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戀棧",
+    "pinyin": "liànzhàn",
+    "vietnameseReading": "luyến trạm",
+    "meaning": {
+      "primary": "Không muốn từ bỏ chức vụ, quyền hạn hoặc vị trí hiện tại; tham quyền cố vị.",
+      "secondary": [
+        "Tham luyến chức vị.",
+        "Không chịu từ chức hoặc rời bỏ địa vị."
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 40,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "這位官員戀棧不肯下台，引起民眾不滿。",
+        "pinyin": "Zhè wèi guānyuán liànzhàn bù kěn xiàtái, yǐnqǐ mínzhòng bùmǎn.",
+        "vietnamese": "Vị quan chức này tham quyền cố vị không chịu từ chức, gây ra sự bất mãn trong dân chúng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "貪戀 (tānliàn - tham luyến - tham luyến)",
+        "眷戀 (juànliàn - quyến luyến - lưu luyến, gắn bó)"
+      ],
+      "antonyms": [
+        "辭職 (cízhí - từ chức - từ chức)",
+        "放權 (fàngquán - phóng quyền - nhường quyền)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戀歌",
+    "pinyin": "liàngē",
+    "vietnameseReading": "luyến ca",
+    "meaning": {
+      "primary": "Bài hát tình yêu; ca khúc lãng mạn.",
+      "secondary": [
+        "Bài hát diễn tả tình cảm đôi lứa."
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 70,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他們在婚禮上唱了一首經典的戀歌。",
+        "pinyin": "Tāmen zài hūnlǐ shàng chàngle yī shǒu jīngdiǎn de liàngē.",
+        "vietnamese": "Họ đã hát một bài luyến ca kinh điển trong đám cưới."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "情歌 (qínggē - tình ca - tình ca)",
+        "愛歌 (àigē - ái ca - bài ca tình yêu)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "流行戀歌 (liúxíng liàngē - lưu hành luyến ca - bài luyến ca thịnh hành)"
+      ]
+    }
+  },
+  {
+    "word": "戀母情結",
+    "pinyin": "liànmǔqíngjié",
+    "vietnameseReading": "luyến mẫu tình kết",
+    "meaning": {
+      "primary": "Phức cảm Oedipus; tình yêu hoặc sự gắn bó quá mức, bệnh hoạn của con trai với mẹ.",
+      "secondary": [
+        "Hội chứng Oedipus (trong phân tâm học)."
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "心理學家分析他的行為可能與戀母情結有關。",
+        "pinyin": "Xīnlǐ xuéjiā fēnxī tā de xíngwéi kěnéng yǔ liànmǔqíngjié yǒuguān.",
+        "vietnamese": "Nhà tâm lý học phân tích hành vi của anh ta có thể liên quan đến phức cảm Oedipus."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "俄狄浦斯情結 (Édípǔsī qíngjié - Nga Địch Phổ Tư tình kết - phức cảm Oedipus)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戀父情結",
+    "pinyin": "liànfùqíngjié",
+    "vietnameseReading": "luyến phụ tình kết",
+    "meaning": {
+      "primary": "Phức cảm Electra; tình yêu hoặc sự gắn bó quá mức, bệnh hoạn của con gái với cha.",
+      "secondary": [
+        "Hội chứng Electra (trong phân tâm học)."
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "她的某些特徵被認為是戀父情結的表現。",
+        "pinyin": "Tā de mǒuxiē tèzhēng bèi rènwéi shì liànfùqíngjié de biǎoxiàn.",
+        "vietnamese": "Một số đặc điểm của cô ấy được cho là biểu hiện của phức cảm Electra."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "厄勒克特拉情結 (Èlèkètèlā qíngjié - Ách Lặc Khắc Đặc Lạp tình kết - phức cảm Electra)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戎衣",
+    "pinyin": "róng yī",
+    "vietnameseReading": "Nhung y",
+    "meaning": {
+      "primary": "Áo giáp; quân phục",
+      "secondary": [
+        "Trang phục chiến đấu",
+        "Áo lính"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 20,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他身穿戎衣，威风凛凛。",
+        "pinyin": "Tā shēn chuān róng yī, wēi fēng lǐn lǐn.",
+        "vietnamese": "Anh ấy mặc áo giáp, oai phong lẫm liệt."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "軍服 (jūn fú - Quân phục)",
+        "戰袍 (zhàn páo - Áo chiến)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戎裝",
+    "pinyin": "róng zhuāng",
+    "vietnameseReading": "Nhung trang",
+    "meaning": {
+      "primary": "Quân phục; trang phục quân sự",
+      "secondary": [
+        "Đồ lính"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "士兵們身著戎裝，準備出發。",
+        "pinyin": "Shìbīngmen shēnzhe róngzhuāng, zhǔnbèi chūfā.",
+        "vietnamese": "Những người lính mặc quân phục, sẵn sàng xuất phát."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "軍裝 (jūn zhuāng - Quân phục)",
+        "戰服 (zhàn fú - Trang phục chiến đấu)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戎車",
+    "pinyin": "róng chē",
+    "vietnameseReading": "Nhung xa",
+    "meaning": {
+      "primary": "Xe quân sự; xe chiến đấu",
+      "secondary": [
+        "Chiến xa",
+        "Xe tăng (hiếm)"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 15,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "古代戰場上，戎車奔馳。",
+        "pinyin": "Gǔdài zhànchǎng shàng, róngchē bēnchí.",
+        "vietnamese": "Trên chiến trường cổ đại, xe quân sự lao nhanh."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "戰車 (zhàn chē - Xe chiến đấu)",
+        "軍車 (jūn chē - Xe quân sự)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "戎馬",
+    "pinyin": "róng mǎ",
+    "vietnameseReading": "Nhung mã",
+    "meaning": {
+      "primary": "Ngựa chiến; việc quân sự",
+      "secondary": [
+        "Chiến sự",
+        "Binh đao"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 30,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "昔日戎馬倥傯，今日太平盛世。",
+        "pinyin": "Xīrì róngmǎ kǒngzǒng, jīnrì tàipíng shèngshì.",
+        "vietnamese": "Ngày xưa chiến tranh bận rộn, ngày nay thời đại thái bình thịnh vượng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "戰馬 (zhàn mǎ - Ngựa chiến)",
+        "軍務 (jūn wù - Việc quân sự)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "戎馬生涯 (róng mǎ shēng yá - Sự nghiệp quân sự)"
+      ]
+    }
+  },
+  {
+    "word": "戎馬生涯",
+    "pinyin": "róng mǎ shēng yá",
+    "vietnameseReading": "Nhung mã sinh nhai",
+    "meaning": {
+      "primary": "Cuộc đời quân sự; sự nghiệp binh nghiệp",
+      "secondary": [
+        "Cuộc sống chiến trường",
+        "Cuộc sống trong quân ngũ"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 40,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "他戎馬生涯數十年，功勳卓著。",
+        "pinyin": "Tā róngmǎ shēngyá shù shí nián, gōngxūn zhuózhe.",
+        "vietnamese": "Ông ấy có hàng chục năm binh nghiệp, công trạng hiển hách."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "軍旅生涯 (jūn lǚ shēng yá - Sự nghiệp quân đội)",
+        "軍事生涯 (jūn shì shēng yá - Sự nghiệp quân sự)"
+      ],
+      "antonyms": [
+        "太平盛世 (tài píng shèng shì - Thời thái bình thịnh vượng)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "成也蕭何，敗也蕭何",
+    "pinyin": "chéng yě xiāo hé, bài yě xiāo hé",
+    "vietnameseReading": "Thành dã Tiêu Hà, bại dã Tiêu Hà",
+    "meaning": {
+      "primary": "Thành công nhờ Tiêu Hà, thất bại cũng vì Tiêu Hà. (Chỉ sự việc mà nguyên nhân thành công và thất bại đều xuất phát từ cùng một người hoặc cùng một yếu tố.)",
+      "secondary": [
+        "Mô tả tình huống mà cả sự nghiệp, thành công và thất bại đều do một người hoặc một nguyên nhân duy nhất gây ra.",
+        "Điển cố từ câu chuyện Hàn Tín được Tiêu Hà tiến cử và cũng bị Tiêu Hà hại chết."
+      ],
+      "partOfSpeech": "Thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 15,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他事业的成功和失败都应归咎于他的急躁性格，真是成也萧何，败也萧何。",
+        "pinyin": "Tā shìyè de chénggōng hé shībài dōu yīng guījiù yú tā de jízhào xìnggé, zhēn shì chéng yě xiāo hé, bài yě xiāo hé.",
+        "vietnamese": "Sự thành công và thất bại trong sự nghiệp của anh ấy đều do tính cách nóng vội của anh ấy gây ra, quả đúng là \"thành công nhờ Tiêu Hà, thất bại cũng vì Tiêu Hà\"."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "祸福相依 (huò fú xiāng yī - Họa phúc nương tựa nhau)"
+      ],
+      "antonyms": [
+        "柳暗花明 (liǔ àn huā míng - Liễu tối hoa sáng - tình thế chuyển biến tốt đẹp)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "成了",
+    "pinyin": "chéng le",
+    "vietnameseReading": "Thành liễu",
+    "meaning": {
+      "primary": "Đã thành công; Đã xong; Đã đạt được; Được rồi.",
+      "secondary": [
+        "Biểu thị sự việc đã hoàn thành hoặc đạt được mục đích.",
+        "Đôi khi biểu thị sự việc đã cố định, không thể thay đổi.",
+        "Cũng có thể dùng để biểu thị sự đồng ý hoặc chấp nhận."
+      ],
+      "partOfSpeech": "Bổ ngữ kết quả, Trợ từ"
+    },
+    "grammar": {
+      "level": "HSK3",
+      "frequency": 90,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "事情终于成了，大家都很高兴。",
+        "pinyin": "Shìqing zhōngyú chéng le, dàjiā dōu hěn gāoxìng.",
+        "vietnamese": "Mọi việc cuối cùng cũng đã xong, mọi người đều rất vui."
+      },
+      {
+        "chinese": "好了，就这么成了。",
+        "pinyin": "Hǎo le, jiù zhème chéng le.",
+        "vietnamese": "Được rồi, cứ thế mà làm. / Tốt rồi, cứ thế là ổn."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "成功 (chénggōng - Thành công)",
+        "办成 (bànchéng - Làm thành)",
+        "搞定 (gǎodìng - Xử lý xong)"
+      ],
+      "antonyms": [
+        "失败 (shībài - Thất bại)",
+        "没成 (méi chéng - Không thành)",
+        "落空 (luòkōng - Trượt, hỏng)"
+      ],
+      "compounds": [
+        "完成 (wánchéng - Hoàn thành)",
+        "达成 (dáchéng - Đạt được)"
+      ]
+    }
+  },
+  {
+    "word": "成事",
+    "pinyin": "chéng shì",
+    "vietnameseReading": "Thành sự",
+    "meaning": {
+      "primary": "Thành công một việc; Hoàn thành công việc; Làm nên việc.",
+      "secondary": [
+        "Đạt được mục đích hoặc kết quả mong muốn trong một sự việc."
+      ],
+      "partOfSpeech": "Động từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 40,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "谋事在人，成事在天。",
+        "pinyin": "Móushì zài rén, chéngshì zài tiān.",
+        "vietnamese": "Mưu sự tại nhân, thành sự tại thiên. (Mưu việc ở người, thành việc ở trời.)"
+      },
+      {
+        "chinese": "他是个能成事的人。",
+        "pinyin": "Tā shì ge néng chéngshì de rén.",
+        "vietnamese": "Anh ấy là người có thể làm nên việc lớn."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "成功 (chénggōng - Thành công)",
+        "办成 (bànchéng - Làm thành)",
+        "完成 (wánchéng - Hoàn thành)"
+      ],
+      "antonyms": [
+        "败事 (bàishì - Làm hỏng việc)",
+        "失败 (shībài - Thất bại)"
+      ],
+      "compounds": [
+        "成就 (chéngjiù - Thành tựu)",
+        "成效 (chéngxiào - Hiệu quả)"
+      ]
+    }
+  },
+  {
+    "word": "成事不足，敗事有餘",
+    "pinyin": "chéng shì bù zú, bài shì yǒu yú",
+    "vietnameseReading": "Thành sự bất túc, bại sự hữu dư",
+    "meaning": {
+      "primary": "Không đủ khả năng làm nên việc, nhưng thừa khả năng làm hỏng việc.",
+      "secondary": [
+        "Miêu tả người không có năng lực, chỉ giỏi gây rắc rối và làm hỏng chuyện; Người vô dụng."
+      ],
+      "partOfSpeech": "Thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他这个人成事不足，败事有余，你可不能指望他。",
+        "pinyin": "Tā zhè ge rén chéngshì bù zú, bàishì yǒu yú, nǐ kě bù néng zhǐwàng tā.",
+        "vietnamese": "Người này không đủ khả năng làm nên việc, nhưng thừa khả năng làm hỏng việc, anh không thể trông cậy vào anh ta đâu."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "庸碌无为 (yōng lù wú wéi - Vô vị tầm thường, không làm được gì)",
+        "百无一用 (bǎi wú yī yòng - Vô dụng, trăm thứ không dùng được)"
+      ],
+      "antonyms": [
+        "能干 (nénggàn - Có năng lực, tháo vát)",
+        "独当一面 (dú dāng yī miàn - Đảm đương một mình, gánh vác một mặt)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "成交",
+    "pinyin": "chéng jiāo",
+    "vietnameseReading": "Thành giao",
+    "meaning": {
+      "primary": "Giao dịch thành công; Thành công trong mua bán; Chốt giao dịch.",
+      "secondary": [
+        "Hoàn tất một thỏa thuận mua bán hoặc trao đổi hàng hóa/dịch vụ."
+      ],
+      "partOfSpeech": "Động từ, Danh từ"
+    },
+    "grammar": {
+      "level": "HSK4",
+      "frequency": 70,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "这笔生意终于成交了。",
+        "pinyin": "Zhè bǐ shēngyì zhōngyú chéngjiāo le.",
+        "vietnamese": "Giao dịch này cuối cùng cũng đã thành công."
+      },
+      {
+        "chinese": "今天的成交量很大。",
+        "pinyin": "Jīntiān de chéngjiāoliàng hěn dà.",
+        "vietnamese": "Khối lượng giao dịch hôm nay rất lớn."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "达成交易 (dáchéng jiāoyì - Đạt được giao dịch)",
+        "交易 (jiāoyì - Giao dịch)"
+      ],
+      "antonyms": [
+        "流产 (liúchǎn - Hủy bỏ, thất bại - dùng cho giao dịch)",
+        "告吹 (gàochuī - Hỏng, thất bại)"
+      ],
+      "compounds": [
+        "成交价 (chéngjiāojià - Giá giao dịch)",
+        "成交量 (chéngjiāoliàng - Khối lượng giao dịch)"
+      ]
+    }
+  },
+  {
+    "word": "或然",
+    "pinyin": "huò rán",
+    "vietnameseReading": "hoặc nhiên",
+    "meaning": {
+      "primary": "Có thể, có khả năng; mang tính xác suất",
+      "secondary": [
+        "có thể xảy ra"
+      ],
+      "partOfSpeech": "tính từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "或然事件",
+        "pinyin": "huò rán shì jiàn",
+        "vietnamese": "sự kiện ngẫu nhiên; sự kiện có thể xảy ra"
+      },
+      {
+        "chinese": "或然性",
+        "pinyin": "huò rán xìng",
+        "vietnamese": "tính xác suất; khả năng xảy ra"
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "可能 (kě néng - có thể)"
+      ],
+      "antonyms": [
+        "必然 (bì rán - tất nhiên)"
+      ],
+      "compounds": [
+        "或然率 (huò rán lǜ - xác suất)"
+      ]
+    }
+  },
+  {
+    "word": "或然率",
+    "pinyin": "huò rán lǜ",
+    "vietnameseReading": "hoặc nhiên suất",
+    "meaning": {
+      "primary": "Xác suất",
+      "secondary": [
+        "tỷ lệ khả năng xảy ra của một sự kiện"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 40,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "计算或然率。",
+        "pinyin": "jì suàn huò rán lǜ.",
+        "vietnamese": "Tính xác suất."
+      },
+      {
+        "chinese": "成功的或然率很低。",
+        "pinyin": "chéng gōng de huò rán lǜ hěn dī.",
+        "vietnamese": "Xác suất thành công rất thấp."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "概率 (gài lǜ - xác suất)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "或然率分布 (huò rán lǜ fēn bù - phân bố xác suất)"
+      ]
+    }
+  },
+  {
+    "word": "或稱",
+    "pinyin": "huò chēng",
+    "vietnameseReading": "hoặc xưng",
+    "meaning": {
+      "primary": "Hay còn gọi là; hoặc được gọi là",
+      "secondary": [
+        "dùng để đưa ra một tên gọi khác hoặc một cách gọi khác"
+      ],
+      "partOfSpeech": "liên từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 30,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "這種植物，或稱金盞花。",
+        "pinyin": "zhè zhǒng zhí wù, huò chēng jīn zhǎn huā.",
+        "vietnamese": "Loài thực vật này, hay còn gọi là cúc vạn thọ."
+      },
+      {
+        "chinese": "他是一位學者，或稱研究員。",
+        "pinyin": "tā shì yī wèi xué zhě, huò chēng yán jiū yuán.",
+        "vietnamese": "Anh ấy là một học giả, hoặc một nhà nghiên cứu."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "又稱 (yòu chēng - lại còn gọi là)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "或缺",
+    "pinyin": "huò quē",
+    "vietnameseReading": "hoặc khuyết",
+    "meaning": {
+      "primary": "Thiếu đi, vắng mặt",
+      "secondary": [
+        "thường dùng trong cụm '不可或缺' để chỉ sự không thể thiếu"
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 45,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "這是生活中不可或缺的一部分。",
+        "pinyin": "zhè shì shēng huó zhōng bù kě huò quē de yī bù fèn.",
+        "vietnamese": "Đây là một phần không thể thiếu trong cuộc sống."
+      },
+      {
+        "chinese": "人才不可或缺。",
+        "pinyin": "rén cái bù kě huò quē.",
+        "vietnamese": "Nhân tài là không thể thiếu."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "必需 (bì xū - cần thiết)",
+        "必不可少 (bì bù kě shǎo - không thể thiếu)"
+      ],
+      "antonyms": [
+        "多餘 (duō yú - thừa thãi)"
+      ],
+      "compounds": [
+        "不可或缺 (bù kě huò quē - không thể thiếu được)"
+      ]
+    }
+  },
+  {
+    "word": "或者",
+    "pinyin": "huò zhě",
+    "vietnameseReading": "hoặc giả",
+    "meaning": {
+      "primary": "Hoặc là; hay là",
+      "secondary": [
+        "dùng để liệt kê các lựa chọn, các khả năng"
+      ],
+      "partOfSpeech": "liên từ"
+    },
+    "grammar": {
+      "level": "HSK4",
+      "frequency": 80,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "你可以喝茶或者咖啡。",
+        "pinyin": "nǐ kě yǐ hē chá huò zhě kā fēi.",
+        "vietnamese": "Bạn có thể uống trà hoặc cà phê."
+      },
+      {
+        "chinese": "他可能在家，或者在圖書館。",
+        "pinyin": "tā kě néng zài jiā, huò zhě zài tú shū guǎn.",
+        "vietnamese": "Anh ấy có thể ở nhà, hoặc ở thư viện."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "或是 (huò shì - hoặc là)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "或者说 (huò zhě shuō - hay nói cách khác)"
+      ]
+    }
+  },
+  {
+    "word": "戴奧辛",
+    "pinyin": "dài ào xīn",
+    "vietnameseReading": "Đi-ô-xin",
+    "meaning": {
+      "primary": "Một hợp chất hữu cơ độc hại, thường là sản phẩm phụ của các quá trình đốt cháy và sản xuất hóa chất.",
+      "secondary": [
+        "Hợp chất gây ô nhiễm môi trường.",
+        "Chất độc có thể tích lũy trong cơ thể."
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 15,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "戴奧辛是一種環境污染物。",
+        "pinyin": "Dài ào xīn shì yī zhǒng huán jìng wū rǎn wù.",
+        "vietnamese": "Đi-ô-xin là một chất gây ô nhiễm môi trường."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "二噁英 (èr è yīng - đi-ô-xin)",
+        "污染 (wū rǎn - ô nhiễm)"
+      ]
+    }
+  },
+  {
+    "word": "戴孝",
+    "pinyin": "dài xiào",
+    "vietnameseReading": "Đới hiếu",
+    "meaning": {
+      "primary": "Mặc đồ tang, đeo tang để thể hiện sự thương tiếc và tưởng nhớ người đã khuất.",
+      "secondary": [
+        "Tham gia tang lễ với trang phục truyền thống.",
+        "Thể hiện lòng hiếu thảo sau cái chết của người thân."
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 40,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他正在為母親戴孝。",
+        "pinyin": "Tā zhèng zài wèi mǔ qīn dài xiào.",
+        "vietnamese": "Anh ấy đang mặc đồ tang cho mẹ mình."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "居喪 (jū sāng - để tang)",
+        "服喪 (fú sāng - chịu tang)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "孝服 (xiào fú - đồ tang)",
+        "孝順 (xiào shùn - hiếu thảo)"
+      ]
+    }
+  },
+  {
+    "word": "戴安娜",
+    "pinyin": "dài ān nà",
+    "vietnameseReading": "Đai An Na",
+    "meaning": {
+      "primary": "Tên riêng, thường dùng để chỉ Công nương Diana của Vương quốc Anh.",
+      "secondary": [
+        "Một tên phổ biến cho phụ nữ.",
+        "Biểu tượng của sự thanh lịch và nhân ái."
+      ],
+      "partOfSpeech": "danh từ riêng"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 30,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "戴安娜王妃是一位廣受愛戴的人物。",
+        "pinyin": "Dài ān nà wáng fēi shì yī wèi guǎng shòu ài dài de rén wù.",
+        "vietnamese": "Công nương Diana là một nhân vật được nhiều người yêu mến."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "戴安娜王妃 (Dài ān nà wáng fēi - Công nương Diana)",
+        "戴安娜獎 (Dài ān nà jiǎng - Giải thưởng Diana)"
+      ]
+    }
+  },
+  {
+    "word": "戴安娜王妃",
+    "pinyin": "dài ān nà wáng fēi",
+    "vietnameseReading": "Đai An Na Vương Phi",
+    "meaning": {
+      "primary": "Công nương Diana, vợ cũ của Thái tử Charles (nay là Vua Charles III) của Vương quốc Anh.",
+      "secondary": [
+        "Một nhân vật biểu tượng của hoàng gia Anh.",
+        "Nổi tiếng với các hoạt động từ thiện và nhân đạo."
+      ],
+      "partOfSpeech": "danh từ riêng"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 35,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "戴安娜王妃一直受到全球人民的懷念。",
+        "pinyin": "Dài ān nà wáng fēi yī zhí shòu dào quán qiú rén mín de huái niàn.",
+        "vietnamese": "Công nương Diana luôn được mọi người trên toàn cầu tưởng nhớ."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "戴安娜 (Dài ān nà - Diana)",
+        "王妃 (wáng fēi - công nương)"
+      ]
+    }
+  },
+  {
+    "word": "戴帽子",
+    "pinyin": "dài mào zi",
+    "vietnameseReading": "Đới mão tử",
+    "meaning": {
+      "primary": "Đeo hoặc đội một chiếc mũ lên đầu.",
+      "secondary": [
+        "Một hành động thông thường khi ra ngoài trời nắng hoặc lạnh.",
+        "Có thể mang ý nghĩa ẩn dụ là bị gán tội, bị vu khống (đội mũ)."
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK3",
+      "frequency": 80,
+      "formality": "informal"
+    },
+    "examples": [
+      {
+        "chinese": "外面很冷，記得戴帽子。",
+        "pinyin": "Wài miàn hěn lěng, jì dé dài mào zi.",
+        "vietnamese": "Ngoài trời lạnh lắm, nhớ đội mũ nhé."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "戴帽 (dài mào - đội mũ)",
+        "穿戴 (chuān dài - mặc đồ và đeo phụ kiện)"
+      ],
+      "antonyms": [
+        "摘帽子 (zhāi mào zi - cởi mũ)"
+      ],
+      "compounds": [
+        "帽子 (mào zi - mũ)",
+        "戴 (dài - đeo/đội)"
+      ]
+    }
+  },
+  {
+    "word": "所託非人",
+    "pinyin": "suǒ tuō fēi rén",
+    "vietnameseReading": "sở thác phi nhân",
+    "meaning": {
+      "primary": "Giao phó không đúng người, trao nhầm người.",
+      "secondary": [
+        "Được tin cậy nhưng lại tin nhầm người.",
+        "Giao việc quan trọng cho người không đáng tin cậy."
+      ],
+      "partOfSpeech": "Thành ngữ (idiom)"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 15,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他把公司的大權交給了新來的經理，結果所託非人，公司損失慘重。",
+        "pinyin": "Tā bǎ gōngsī de dàquán jiāo gěile xīn lái de jīnglǐ, jiéguǒ suǒ tuō fēi rén, gōngsī sǔnshī cǎnzòng.",
+        "vietnamese": "Anh ta giao quyền lực lớn của công ty cho người quản lý mới đến, kết quả là giao nhầm người, công ty chịu tổn thất nặng nề."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "擇人不當 (zé rén bù dàng - Chọn người không đúng)",
+        "託付非人 (tuō fù fēi rén - Giao phó không đúng người)"
+      ],
+      "antonyms": [
+        "知人善任 (zhī rén shàn rèn - Biết người dùng người giỏi)",
+        "任人唯賢 (rèn rén wéi xián - Dùng người theo tài năng)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "所謂",
+    "pinyin": "suǒ wèi",
+    "vietnameseReading": "sở vị",
+    "meaning": {
+      "primary": "Cái gọi là, cái được gọi là.",
+      "secondary": [
+        "Được dùng để giới thiệu hoặc nhấn mạnh một khái niệm, thường mang ý nghĩa nghi vấn hoặc phủ định.",
+        "Thường đứng trước danh từ hoặc cụm danh từ."
+      ],
+      "partOfSpeech": "Trợ từ (particle), Liên từ (conjunction)"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 75,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "所謂的專家，其實對這個問題一無所知。",
+        "pinyin": "Suǒwèi de zhuānjiā, qíshí duì zhège wèntí yīwúsuǒzhī.",
+        "vietnamese": "Cái gọi là chuyên gia, thực ra lại không biết gì về vấn đề này."
+      },
+      {
+        "chinese": "所謂「讀萬卷書，不如行萬里路」，強調了實踐的重要性。",
+        "pinyin": "Suǒwèi \"dú wàn juǎn shū, bùrú xíng wàn lǐ lù\", qiángdiào le shíjiàn de zhòngyàoxìng.",
+        "vietnamese": "Cái gọi là \"đọc vạn quyển sách không bằng đi vạn dặm đường\", nhấn mạnh tầm quan trọng của thực tiễn."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "所謂的 (suǒ wèi de - Cái gọi là)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "所部",
+    "pinyin": "suǒ bù",
+    "vietnameseReading": "sở bộ",
+    "meaning": {
+      "primary": "Đơn vị trực thuộc, bộ phận phụ trách.",
+      "secondary": [
+        "Các đơn vị, nhân sự dưới quyền quản lý hoặc chỉ huy.",
+        "Thường dùng trong văn bản chính thức hoặc quân sự."
+      ],
+      "partOfSpeech": "Danh từ (noun)"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 20,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "將軍檢閱了所部部隊，士氣高昂。",
+        "pinyin": "Jiāngjūn jiǎnyuè le suǒ bù bùduì, shìqì gāo'áng.",
+        "vietnamese": "Vị tướng đã duyệt các đơn vị trực thuộc, tinh thần chiến đấu cao ngút."
+      },
+      {
+        "chinese": "報告顯示，所部單位的工作效率有所提升。",
+        "pinyin": "Bàogào xiǎnshì, suǒ bù dānwèi de gōngzuò xiàolǜ yǒu suǒ tíshēng.",
+        "vietnamese": "Báo cáo cho thấy hiệu suất làm việc của các đơn vị trực thuộc đã được nâng cao."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "下屬 (xià shǔ - Cấp dưới)",
+        "轄區 (xiá qū - Khu vực quản hạt)"
+      ],
+      "antonyms": [
+        "上級 (shàng jí - Cấp trên)"
+      ],
+      "compounds": []
+    }
+  },
+  {
+    "word": "所長",
+    "pinyin": "suǒ zhǎng",
+    "vietnameseReading": "sở trưởng",
+    "meaning": {
+      "primary": "Viện trưởng, trưởng cục, người đứng đầu một cơ quan, viện nghiên cứu.",
+      "secondary": [
+        "Chức vụ quản lý cao nhất trong một '所' (sở/viện/trung tâm).",
+        "Thường dùng trong các tổ chức, viện nghiên cứu, đồn công an."
+      ],
+      "partOfSpeech": "Danh từ (noun)"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 50,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "他被任命為研究所的所長。",
+        "pinyin": "Tā bèi rènmìng wèi yánjiūsuǒ de suǒ zhǎng.",
+        "vietnamese": "Anh ấy được bổ nhiệm làm viện trưởng của viện nghiên cứu."
+      },
+      {
+        "chinese": "警方逮捕了犯罪嫌疑人，並將他帶回了派出所，所長親自審問。",
+        "pinyin": "Jǐngfāng dàibǔ le fànzuì xiányírén, bìng jiāng tā dài huí le pàichūsuǒ, suǒ zhǎng qīnzì shěnwèn.",
+        "vietnamese": "Cảnh sát đã bắt giữ nghi phạm và đưa anh ta về đồn công an, sở trưởng đích thân thẩm vấn."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "院長 (yuànzhǎng - Viện trưởng)",
+        "局長 (júzhǎng - Cục trưởng)",
+        "主任 (zhǔrèn - Chủ nhiệm)"
+      ],
+      "antonyms": [
+        "員工 (yuángōng - Nhân viên)",
+        "下屬 (xià shǔ - Cấp dưới)"
+      ],
+      "compounds": [
+        "派出所 (pàichūsuǒ - Đồn công an)",
+        "研究所 (yánjiūsuǒ - Viện nghiên cứu)"
+      ]
+    }
+  },
+  {
+    "word": "扁虱",
+    "pinyin": "biǎn shī",
+    "vietnameseReading": "biển sắt",
+    "meaning": {
+      "primary": "ve chó, bọ ve (một loại côn trùng ký sinh)",
+      "secondary": [
+        "loài ve dẹt chuyên sống ký sinh trên động vật và người"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 20,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "這隻狗身上有扁虱。",
+        "vietnamese": "Con chó này có ve trên người."
+      },
+      {
+        "chinese": "扁虱會傳播疾病。",
+        "vietnamese": "Ve bọ có thể lây lan bệnh tật."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "蜱虫 (pí chóng - ve, bọ ve)",
+        "虱子 (shī zi - chấy, rận)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "扁蟲",
+    "pinyin": "biǎn chóng",
+    "vietnameseReading": "biển trùng",
+    "meaning": {
+      "primary": "giun dẹp, sán dẹp (một ngành động vật không xương sống)",
+      "secondary": [
+        "nhóm các loài giun có thân dẹt, bao gồm sán lá và sán dây"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 25,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "扁蟲是無脊椎動物。",
+        "vietnamese": "Giun dẹp là động vật không xương sống."
+      },
+      {
+        "chinese": "有些扁蟲是寄生蟲。",
+        "vietnamese": "Một số loài giun dẹp là ký sinh trùng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "絛蟲 (tāo chóng - sán dây)",
+        "吸蟲 (xī chóng - sán lá)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "扁豆",
+    "pinyin": "biǎn dòu",
+    "vietnameseReading": "biển đậu",
+    "meaning": {
+      "primary": "đậu ván (một loại cây họ đậu, quả và hạt có thể ăn được)",
+      "secondary": [
+        "còn gọi là bạch biển đậu, là loại đậu có hình dạng dẹt"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 60,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "我喜歡吃炒扁豆。",
+        "vietnamese": "Tôi thích ăn đậu ván xào."
+      },
+      {
+        "chinese": "扁豆富含蛋白質。",
+        "vietnamese": "Đậu ván giàu protein."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "鵲豆 (què dòu - đậu ván)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "扁豆莢 (biǎn dòu jiá - vỏ đậu ván)",
+        "扁豆湯 (biǎn dòu tāng - súp đậu ván)"
+      ]
+    }
+  },
+  {
+    "word": "扁鍬形蟲",
+    "pinyin": "biǎn qiāo xíng chóng",
+    "vietnameseReading": "biển xảo hình trùng",
+    "meaning": {
+      "primary": "bọ hung kẹp sừng phẳng (một loài bọ cánh cứng lớn, đặc trưng bởi hàm răng lớn và thân dẹt)",
+      "secondary": [
+        "thường được tìm thấy ở châu Á, là loài côn trùng được nhiều người nuôi làm thú cưng"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 10,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "扁鍬形蟲的雄性有巨大的顎。",
+        "vietnamese": "Con bọ hung kẹp sừng phẳng đực có hàm rất lớn."
+      },
+      {
+        "chinese": "他在野外發現了一隻扁鍬形蟲。",
+        "vietnamese": "Anh ấy đã tìm thấy một con bọ hung kẹp sừng phẳng trong tự nhiên."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "鍬形蟲 (qiāo xíng chóng - bọ hung kẹp)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "扁額",
+    "pinyin": "biǎn é",
+    "vietnameseReading": "biển ngạch",
+    "meaning": {
+      "primary": "biển hiệu ngang, bảng hiệu ngang (thường là một tấm bảng dài, ngang, có khắc chữ, treo trên cửa)",
+      "secondary": [
+        "thường dùng trong kiến trúc cổ truyền, như trên cổng chùa, miếu, nhà ở"
+      ],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 30,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "這座廟宇懸掛著一塊古老的扁額。",
+        "vietnamese": "Ngôi đền này treo một tấm biển hiệu ngang cổ xưa."
+      },
+      {
+        "chinese": "他為商店寫了一幅扁額。",
+        "vietnamese": "Anh ấy đã viết một tấm biển hiệu ngang cho cửa hàng."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "匾 (biǎn - biển hiệu)",
+        "招牌 (zhāo pái - bảng hiệu)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "扇葉",
+    "pinyin": "shàn yè",
+    "vietnameseReading": "phiến diệp",
+    "meaning": {
+      "primary": "cánh quạt",
+      "secondary": [],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 75,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "電風扇的扇葉轉得很快。",
+        "pinyin": "Diàn fēngshàn de shàn yè zhuǎn dé hěn kuài.",
+        "vietnamese": "Cánh quạt của quạt điện quay rất nhanh."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "風扇 (fēngshàn - quạt)",
+        "葉片 (yèpiàn - cánh lá, phiến lá)"
+      ]
+    }
+  },
+  {
+    "word": "扇貝",
+    "pinyin": "shàn bèi",
+    "vietnameseReading": "phiến bối",
+    "meaning": {
+      "primary": "sò điệp",
+      "secondary": [],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 60,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "這道菜有新鮮的扇貝。",
+        "pinyin": "Zhè dào cài yǒu xīnxiān de shàn bèi.",
+        "vietnamese": "Món ăn này có sò điệp tươi."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "貝殼 (bèiké - vỏ sò)",
+        "海鮮 (hǎixiān - hải sản)"
+      ]
+    }
+  },
+  {
+    "word": "扇面琴",
+    "pinyin": "shàn miàn qín",
+    "vietnameseReading": "phiến diện cầm",
+    "meaning": {
+      "primary": "đàn hình quạt (một loại nhạc cụ cổ Trung Quốc)",
+      "secondary": [],
+      "partOfSpeech": "danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 5,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "扇面琴是一種獨特的中國樂器。",
+        "pinyin": "Shàn miàn qín shì yī zhǒng dú tè de Zhōngguó yuèqì.",
+        "vietnamese": "Đàn hình quạt là một loại nhạc cụ Trung Quốc độc đáo."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "樂器 (yuèqì - nhạc cụ)",
+        "古琴 (gǔqín - cổ cầm)"
+      ]
+    }
+  },
+  {
+    "word": "扇風",
+    "pinyin": "shàn fēng",
+    "vietnameseReading": "phiến phong",
+    "meaning": {
+      "primary": "quạt (tạo gió), làm mát bằng quạt",
+      "secondary": [
+        "khuấy động (tin đồn), châm ngòi"
+      ],
+      "partOfSpeech": "động từ"
+    },
+    "grammar": {
+      "level": "HSK4",
+      "frequency": 85,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "他用扇子扇風，讓自己涼快一些。",
+        "pinyin": "Tā yòng shànzi shàn fēng, ràng zìjǐ liángkuai yīxiē.",
+        "vietnamese": "Anh ấy dùng quạt tay quạt gió, để bản thân mát mẻ hơn một chút."
+      },
+      {
+        "chinese": "不要扇風點火，讓事情更糟。",
+        "pinyin": "Bù yào shànfēngdiǎnhuǒ, ràng shìqíng gèng zāo.",
+        "vietnamese": "Đừng châm ngòi thổi gió, làm mọi việc tồi tệ hơn."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "扇子 (shànzi - quạt tay)",
+        "風 (fēng - gió)"
+      ]
+    }
+  },
+  {
+    "word": "扇風耳朵",
+    "pinyin": "shàn fēng ěr duǒ",
+    "vietnameseReading": "phiến phong nhĩ đóa",
+    "meaning": {
+      "primary": "nói lời ngon ngọt, nịnh hót, xúi giục (thường tiêu cực)",
+      "secondary": [],
+      "partOfSpeech": "thành ngữ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 20,
+      "formality": "informal"
+    },
+    "examples": [
+      {
+        "chinese": "他總是喜歡在老闆面前扇風耳朵，討好上司。",
+        "pinyin": "Tā zǒng shì xǐhuān zài lǎobǎn miànqián shàn fēng ěr duǒ, tǎohǎo shàngsī.",
+        "vietnamese": "Anh ấy luôn thích nói lời ngon ngọt trước mặt sếp, nịnh bợ cấp trên."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "拍馬屁 (pāimǎpì - nịnh hót)",
+        "阿諛奉承 (ēyú fèngchéng - nịnh nọt vuốt ve)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "扇風 (shànfēng - quạt gió)",
+        "耳朵 (ěrduǒ - tai)"
+      ]
+    }
+  },
+  {
+    "word": "扈",
+    "pinyin": "hù",
+    "vietnameseReading": "Hộ",
+    "meaning": {
+      "primary": "Theo hầu; hộ tống.",
+      "secondary": [
+        "(Văn học cổ) Một họ; tên một địa danh cổ."
+      ],
+      "partOfSpeech": "Động từ, Danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 5,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他在帝王身邊扈從。",
+        "pinyin": "Tā zài dìwáng shēnbiān hùcóng.",
+        "vietnamese": "Anh ta theo hầu bên cạnh vua chúa."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "扈從 (hùcóng - theo hầu)",
+        "扈戴 (hùdài - mang hộ tống)"
+      ]
+    }
+  },
+  {
+    "word": "扉",
+    "pinyin": "fēi",
+    "vietnameseReading": "Phi",
+    "meaning": {
+      "primary": "Cửa nhỏ; cửa phụ (thường là cửa bên trong, hoặc cửa chuồng).",
+      "secondary": [
+        "(Văn học) Cánh cửa (nói chung)."
+      ],
+      "partOfSpeech": "Danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 15,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "他推開柴扉，走進院子。",
+        "pinyin": "Tā tuī kāi cháifēi, zǒujìn yuànzi.",
+        "vietnamese": "Anh ấy đẩy cánh cửa gỗ mục nát, bước vào sân."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "門 (mén - cửa)",
+        "戶 (hù - hộ)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "柴扉 (cháifēi - cửa gỗ mục)",
+        "柴門 (cháimén - cửa gỗ mục)"
+      ]
+    }
+  },
+  {
+    "word": "扉畫",
+    "pinyin": "fēihuà",
+    "vietnameseReading": "Phi họa",
+    "meaning": {
+      "primary": "Tranh minh họa bìa sách; tranh minh họa đầu sách.",
+      "secondary": [],
+      "partOfSpeech": "Danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 10,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "這本小說的扉畫非常精美。",
+        "pinyin": "Zhè běn xiǎoshuō de fēihuà fēicháng jīngměi.",
+        "vietnamese": "Tranh minh họa đầu sách của cuốn tiểu thuyết này rất tinh xảo."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "插圖 (chātú - hình minh họa)",
+        "插畫 (chāhuà - minh họa)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "扉頁 (fēiyè - trang bìa phụ)",
+        "封面 (fēngmiàn - bìa sách)"
+      ]
+    }
+  },
+  {
+    "word": "扉頁",
+    "pinyin": "fēiyè",
+    "vietnameseReading": "Phi diệp",
+    "meaning": {
+      "primary": "Trang bìa phụ; trang giới thiệu (sau bìa chính và trước trang tiêu đề của sách).",
+      "secondary": [],
+      "partOfSpeech": "Danh từ"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 10,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "作者在扉頁上簽了名。",
+        "pinyin": "Zuòzhě zài fēiyè shàng qiān le míng.",
+        "vietnamese": "Tác giả đã ký tên vào trang bìa phụ."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "附頁 (fùyè - trang phụ)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "封面 (fēngmiàn - bìa sách)",
+        "書頁 (shūyè - trang sách)"
+      ]
+    }
+  },
+  {
+    "word": "手感",
+    "pinyin": "shǒugǎn",
+    "vietnameseReading": "Thủ cảm",
+    "meaning": {
+      "primary": "Cảm giác khi chạm vào; cảm giác tay",
+      "secondary": [
+        "Chất lượng cảm nhận được khi chạm vào một vật thể, thường dùng để mô tả về chất liệu hoặc bề mặt."
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 70,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "这件衣服手感很好，摸起来很舒服。",
+        "pinyin": "Zhè jiàn yīfu shǒugǎn hěn hǎo, mō qǐlái hěn shūfu.",
+        "vietnamese": "Chiếc áo này có cảm giác chạm vào rất tốt, sờ vào rất thoải mái."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": [
+        "手感舒适 (shǒugǎn shūshì - Cảm giác tay thoải mái)",
+        "球感 (qiúgǎn - Cảm giác bóng)"
+      ]
+    }
+  },
+  {
+    "word": "手扳葫蘆",
+    "pinyin": "shǒubān húlu",
+    "vietnameseReading": "Thủ ban hồ lô / Palăng xích kéo tay",
+    "meaning": {
+      "primary": "Palăng xích kéo tay (thiết bị nâng hạ)",
+      "secondary": [
+        "Một loại thiết bị nâng hạ nhỏ gọn, sử dụng sức người để kéo vật nặng thông qua cơ cấu bánh răng và xích."
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 20,
+      "formality": "formal"
+    },
+    "examples": [
+      {
+        "chinese": "工人们用手扳葫芦将重型机械吊起。",
+        "pinyin": "Gōngrénmen yòng shǒubān húlu jiāng zhòngxíng jīxiè diào qǐ.",
+        "vietnamese": "Công nhân dùng palăng xích kéo tay để nâng máy móc hạng nặng lên."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "手拉葫芦 (shǒulā húlu - Palăng xích kéo tay)"
+      ],
+      "antonyms": [],
+      "compounds": []
+    }
+  },
+  {
+    "word": "手抄本",
+    "pinyin": "shǒuchāoběn",
+    "vietnameseReading": "Thủ sao bản",
+    "meaning": {
+      "primary": "Bản chép tay; bản sao chép bằng tay",
+      "secondary": [
+        "Sách hoặc tài liệu được sao chép thủ công trước khi có công nghệ in ấn, hoặc dùng để chỉ các bản nháp, bản sao chép riêng tư."
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "HSK6",
+      "frequency": 50,
+      "formality": "literary"
+    },
+    "examples": [
+      {
+        "chinese": "这份珍贵的手抄本古籍保存了千年。",
+        "pinyin": "Zhè fèn zhēnguì de shǒuchāoběn gǔjí bǎocún le qiānnián.",
+        "vietnamese": "Bản chép tay cổ quý giá này đã được bảo tồn hàng ngàn năm."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "手稿 (shǒugǎo - Bản thảo viết tay)"
+      ],
+      "antonyms": [
+        "印刷品 (yìnshuāpǐn - Ấn phẩm)"
+      ],
+      "compounds": [
+        "手抄本小说 (shǒuchāoběn xiǎoshuō - Tiểu thuyết chép tay)"
+      ]
+    }
+  },
+  {
+    "word": "手把",
+    "pinyin": "shǒubǎ",
+    "vietnameseReading": "Thủ bả",
+    "meaning": {
+      "primary": "Tay cầm; nắm tay",
+      "secondary": [
+        "Bộ phận dùng để cầm, nắm, điều khiển trên các vật dụng như xe đạp, cửa, vali, v.v."
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "HSK5",
+      "frequency": 65,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "自行车的手把需要修理了。",
+        "pinyin": "Zìxíngchē de shǒubǎ xūyào xiūlǐ le.",
+        "vietnamese": "Tay lái xe đạp cần phải sửa rồi."
+      }
+    ],
+    "related": {
+      "synonyms": [
+        "把手 (bǎshǒu - Tay cầm)",
+        "握把 (wòbǎ - Nắm tay)"
+      ],
+      "antonyms": [],
+      "compounds": [
+        "手把手 (shǒubǎshǒu - Cầm tay chỉ việc)"
+      ]
+    }
+  },
+  {
+    "word": "手抓羊肉",
+    "pinyin": "shǒuzhuā yángròu",
+    "vietnameseReading": "Thủ trảo dương nhục / Món thịt cừu nắm tay",
+    "meaning": {
+      "primary": "Món thịt cừu nắm tay (món ăn truyền thống)",
+      "secondary": [
+        "Một món ăn đặc trưng của vùng Tây Bắc Trung Quốc, đặc biệt phổ biến trong các dân tộc thiểu số như người Hồi, thường là thịt cừu luộc hoặc hấp, ăn kèm với gia vị và thường được dùng tay để ăn."
+      ],
+      "partOfSpeech": "noun"
+    },
+    "grammar": {
+      "level": "Advanced",
+      "frequency": 40,
+      "formality": "neutral"
+    },
+    "examples": [
+      {
+        "chinese": "去宁夏旅游一定要品尝手抓羊肉。",
+        "pinyin": "Qù Níngxià lǚyóu yīdìng yào pǐncháng shǒuzhuā yángròu.",
+        "vietnamese": "Đi du lịch Ninh Hạ nhất định phải nếm thử món thịt cừu nắm tay."
+      }
+    ],
+    "related": {
+      "synonyms": [],
+      "antonyms": [],
+      "compounds": []
+    }
+  }
+]
